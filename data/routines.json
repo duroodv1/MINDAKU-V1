@@ -1,0 +1,72 @@
+{
+  "sets": [
+    {
+      "name": "Pagi Sebelum Sekolah",
+      "steps": ["Bangun tidur", "Mandi", "Gosok gigi", "Sarapan", "Pakai baju sekolah", "Sedia beg sekolah", "Pergi ke sekolah"],
+      "distractors": ["Bermain bola", "Menonton TV", "Makan malam", "Tidur semula", "Mencuci kereta"]
+    },
+    {
+      "name": "Petang Selepas Sekolah",
+      "steps": ["Balik dari sekolah", "Tukar baju", "Makan bekal", "Rehat sebentar", "Buat kerja rumah", "Bermain", "Mandi petang"],
+      "distractors": ["Gosok gigi pagi", "Pergi sekolah", "Sarapan pagi", "Bangun tidur"]
+    },
+    {
+      "name": "Persediaan Tidur",
+      "steps": ["Kemas mainan", "Mandi malam", "Gosok gigi", "Pakai baju tidur", "Baca buku cerita", "Matikan lampu", "Tidur"],
+      "distractors": ["Bermain bola", "Sarapan", "Pergi sekolah", "Menonton kartun lama"]
+    },
+    {
+      "name": "Membuat Roti Bakar",
+      "steps": ["Ambil roti", "Sapukan mentega", "Bakar roti", "Sapukan jem", "Letak di pinggan", "Makan"],
+      "distractors": ["Gosok gigi", "Mandi", "Pakai kasut"]
+    },
+    {
+      "name": "Menanam Bunga",
+      "steps": ["Sediakan pasu", "Isi pasu dengan tanah", "Masukkan biji", "Siram air", "Letak di tempat cerah", "Jaga setiap hari"],
+      "distractors": ["Makan nasi", "Tidur", "Gosok gigi"]
+    }
+  ],
+  "room": {
+    "zones": [
+      { "id": "rakbuku", "label": "Rak Buku", "emoji": "📚" },
+      { "id": "almari", "label": "Almari", "emoji": "🚪" },
+      { "id": "rakkasut", "label": "Rak Kasut", "emoji": "👟" },
+      { "id": "kotakmainan", "label": "Kotak Mainan", "emoji": "🧸" },
+      { "id": "bakalat", "label": "Bakalat / Tong Kertas", "emoji": "🗑️" }
+    ],
+    "items": [
+      { "n": "Buku cerita", "e": "📚", "zone": "rakbuku" },
+      { "n": "Majalah", "e": "📖", "zone": "rakbuku" },
+      { "n": "Buku latihan", "e": "📒", "zone": "rakbuku" },
+      { "n": "Baju", "e": "👕", "zone": "almari" },
+      { "n": "Seluar", "e": "👖", "zone": "almari" },
+      { "n": "Stokin", "e": "🧦", "zone": "almari" },
+      { "n": "Selendang", "e": "🧣", "zone": "almari" },
+      { "n": "Kasut sekolah", "e": "👟", "zone": "rakkasut" },
+      { "n": "Selipar", "e": "🩴", "zone": "rakkasut" },
+      { "n": "Kasut sukan", "e": "👟", "zone": "rakkasut" },
+      { "n": "Patung beruang", "e": "🧸", "zone": "kotakmainan" },
+      { "n": "Bola", "e": "⚽", "zone": "kotakmainan" },
+      { "n": "Blok binaan", "e": "🧱", "zone": "kotakmainan" },
+      { "n": "Robot mainan", "e": "🤖", "zone": "kotakmainan" },
+      { "n": "Kertas lusuh", "e": "📄", "zone": "bakalat" },
+      { "n": "Pembalut gula-gula", "e": "🍬", "zone": "bakalat" }
+    ]
+  },
+  "schoolbag": {
+    "scenarios": [
+      { "s": "Esok hari sekolah biasa. Apa yang perlu dibawa?", "essentials": ["Buku teks", "Buku latihan", "Pensel", "Pemadam", "Botol air", "Bekal makan"], "distractors": ["Mainan kereta", "Bola sepak", "Komik", "Patung beruang", "Payung besar", "Krayon 100 warna"] },
+      { "s": "Esok kelas seni! Apa yang perlu dibawa?", "essentials": ["Buku latihan", "Pensel", "Krayon", "Botol air", "Bekal makan"], "distractors": ["Mainan kereta", "Bola sepak", "Komik", "Patung beruang"] },
+      { "s": "Esok kelas pendidikan jasmani (PJ). Apa yang perlu dibawa?", "essentials": ["Baju sukan", "Kasut sukan", "Botol air", "Tuala kecil", "Bekal makan"], "distractors": ["Komik", "Mainan kereta", "Krayon", "Patung beruang"] },
+      { "s": "Esok ujian matematik. Apa yang perlu dibawa?", "essentials": ["Buku latihan", "Pensel", "Pembaris", "Pemadam", "Botol air"], "distractors": ["Bola sepak", "Komik", "Mainan kereta", "Patung beruang", "Payung besar"] }
+    ],
+    "items": [
+      { "n": "Buku teks", "e": "📚" }, { "n": "Buku latihan", "e": "📒" }, { "n": "Pensel", "e": "✏️" },
+      { "n": "Pemadam", "e": "🧽" }, { "n": "Pembaris", "e": "📏" }, { "n": "Botol air", "e": "🍶" },
+      { "n": "Bekal makan", "e": "🥪" }, { "n": "Krayon", "e": "🖍️" }, { "n": "Baju sukan", "e": "🎽" },
+      { "n": "Kasut sukan", "e": "👟" }, { "n": "Tuala kecil", "e": "🧻" }, { "n": "Mainan kereta", "e": "🏎️" },
+      { "n": "Bola sepak", "e": "⚽" }, { "n": "Komik", "e": "📕" }, { "n": "Patung beruang", "e": "🧸" },
+      { "n": "Payung besar", "e": "☂️" }, { "n": "Krayon 100 warna", "e": "🎨" }
+    ]
+  }
+}

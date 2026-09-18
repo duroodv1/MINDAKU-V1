@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- MINDAKU V.1 — Maskot: burung hantu comel bercermin mata memegang buku -->
+  <ellipse cx="100" cy="112" rx="66" ry="72" fill="#6FAE9B"/>
+  <ellipse cx="100" cy="126" rx="46" ry="50" fill="#F4EDD8"/>
+  <path d="M44 58 L54 22 L76 44 Z" fill="#6FAE9B"/><path d="M156 58 L146 22 L124 44 Z" fill="#6FAE9B"/>
+  <circle cx="68" cy="70" r="12" fill="#7FBBA8"/><circle cx="132" cy="70" r="12" fill="#7FBBA8"/>
+  <circle cx="74" cy="78" r="20" fill="#fff"/><circle cx="126" cy="78" r="20" fill="#fff"/>
+  <circle cx="76" cy="80" r="9" fill="#33413F"/><circle cx="124" cy="80" r="9" fill="#33413F"/>
+  <circle cx="79" cy="77" r="3" fill="#fff"/><circle cx="127" cy="77" r="3" fill="#fff"/>
+  <g fill="none" stroke="#2C5D63" stroke-width="5">
+    <circle cx="74" cy="78" r="24"/><circle cx="126" cy="78" r="24"/><path d="M98 78 L102 78"/>
+  </g>
+  <path d="M100 92 L108 104 L100 110 L92 104 Z" fill="#F2A65A"/>
+  <circle cx="60" cy="102" r="7" fill="#F2B8A0" opacity=".7"/><circle cx="140" cy="102" r="7" fill="#F2B8A0" opacity=".7"/>
+  <ellipse cx="42" cy="120" rx="16" ry="34" fill="#5E9C8A" transform="rotate(14 42 120)"/>
+  <ellipse cx="158" cy="120" rx="16" ry="34" fill="#5E9C8A" transform="rotate(-14 158 120)"/>
+  <g transform="translate(100 152)">
+    <path d="M-40 -6 Q-20 -14 0 -6 Q20 -14 40 -6 L40 14 Q20 6 0 14 Q-20 6 -40 14 Z" fill="#D96C4F"/>
+    <path d="M-36 -3 Q-18 -10 0 -3 L0 10 Q-18 3 -36 10 Z" fill="#FFF9EC"/>
+    <path d="M36 -3 Q18 -10 0 -3 L0 10 Q18 3 36 10 Z" fill="#FFF9EC"/>
+    <path d="M0 -3 L0 10" stroke="#D96C4F" stroke-width="2.5"/>
+  </g>
+</svg>

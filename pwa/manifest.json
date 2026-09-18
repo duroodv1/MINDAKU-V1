@@ -1,0 +1,21 @@
+{
+  "name": "MINDAKU V.1 — Belajar Bermain Berkembang",
+  "short_name": "MINDAKU",
+  "description": "50 permainan interaktif pendidikan untuk kanak-kanak 8–12 tahun. Belajar • Bermain • Berkembang. Berfungsi luar talian.",
+  "id": "mindaku-v1",
+  "start_url": "../index.html",
+  "scope": "../",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#3E7C82",
+  "background_color": "#FBF8F1",
+  "lang": "ms",
+  "dir": "ltr",
+  "categories": ["education", "kids", "games"],
+  "icons": [
+    { "src": "../icons/icon-96.png", "sizes": "96x96", "type": "image/png" },
+    { "src": "../icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "../icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "../icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

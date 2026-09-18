@@ -1,0 +1,48 @@
+{
+  "types": ["AB", "AAB", "ABB", "ABC", "AABB", "ABBC"],
+  "attrs": {
+    "warna": [
+      { "id": "merah", "label": "Merah", "emoji": "🔴" },
+      { "id": "biru", "label": "Biru", "emoji": "🔵" },
+      { "id": "kuning", "label": "Kuning", "emoji": "🟡" },
+      { "id": "hijau", "label": "Hijau", "emoji": "🟢" },
+      { "id": "ungu", "label": "Ungu", "emoji": "🟣" },
+      { "id": "oren", "label": "Oren", "emoji": "🟠" }
+    ],
+    "bentuk": [
+      { "id": "bintang", "label": "Bintang", "emoji": "⭐" },
+      { "id": "hati", "label": "Hati", "emoji": "❤️" },
+      { "id": "segitiga", "label": "Segi Tiga", "emoji": "🔺" },
+      { "id": "bulat", "label": "Bulat", "emoji": "🟣" },
+      { "id": "segiempat", "label": "Segi Empat", "emoji": "🟦" },
+      { "id": "berlian", "label": "Berlian", "emoji": "🔶" }
+    ],
+    "haiwan": [
+      { "id": "kucing", "label": "Kucing", "emoji": "🐱" },
+      { "id": "anjing", "label": "Anjing", "emoji": "🐶" },
+      { "id": "arnab", "label": "Arnab", "emoji": "🐰" },
+      { "id": "burung", "label": "Burung", "emoji": "🐦" },
+      { "id": "katak", "label": "Katak", "emoji": "🐸" },
+      { "id": "ikan", "label": "Ikan", "emoji": "🐟" }
+    ],
+    "buah": [
+      { "id": "epal", "label": "Epal", "emoji": "🍎" },
+      { "id": "pisang", "label": "Pisang", "emoji": "🍌" },
+      { "id": "oren", "label": "Oren", "emoji": "🍊" },
+      { "id": "anggur", "label": "Anggur", "emoji": "🍇" },
+      { "id": "semangka", "label": "Tembikai", "emoji": "🍉" },
+      { "id": "strawberi", "label": "Strawberi", "emoji": "🍓" }
+    ]
+  },
+  "growing": {
+    "note": "Pola bertambah: setiap rumah bertambah 1 tetingkap",
+    "buildings": [
+      { "id": "rumah", "label": "Rumah", "emoji": "🏠" },
+      { "id": "kedai", "label": "Kedai", "emoji": "🏪" },
+      { "id": "sekolah", "label": "Sekolah", "emoji": "🏫" },
+      { "id": "hospital", "label": "Hospital", "emoji": "🏥" },
+      { "id": "pejabat", "label": "Pejabat", "emoji": "🏢" },
+      { "id": "hotel", "label": "Hotel", "emoji": "🏨" }
+    ]
+  }
+}

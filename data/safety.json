@@ -1,0 +1,410 @@
+{
+  "safeUnsafe": [
+    {
+      "s": "Bermain di taman permainan bersama kawan",
+      "safe": true,
+      "why": "Bermain bersama kawan di taman itu selamat dan menyeronokkan."
+    },
+    {
+      "s": "Memakai tali pinggang keledar di dalam kereta",
+      "safe": true,
+      "why": "Tali pinggang keledar melindungi kita jika kereta berhenti mengejut."
+    },
+    {
+      "s": "Menunggu lampu isyarat hijau sebelum melintas",
+      "safe": true,
+      "why": "Menunggu isyarat hijau memastikan kenderaan berhenti untuk kita."
+    },
+    {
+      "s": "Berjalan di laluan pejalan kaki",
+      "safe": true,
+      "why": "Laluan pejalan kaki tempat selamat untuk kita berjalan."
+    },
+    {
+      "s": "Memakai topi keledar ketika berbasikal",
+      "safe": true,
+      "why": "Topi keledar melindungi kepala jika kita terjatuh."
+    },
+    {
+      "s": "Beritahu orang dewasa jika tersesat",
+      "safe": true,
+      "why": "Orang dewasa seperti polis atau cikgu boleh membantu kita."
+    },
+    {
+      "s": "Menyentuh dapur panas ketika memasak seorang diri",
+      "safe": false,
+      "why": "Dapur panas boleh melecur. Minta orang dewasa membantu."
+    },
+    {
+      "s": "Bermain dengan mancis atau pemetik api",
+      "safe": false,
+      "why": "Api berbahaya dan boleh menyebabkan kebakaran."
+    },
+    {
+      "s": "Menyentuh wayar elektrik yang terdedah",
+      "safe": false,
+      "why": "Wayar terdedah boleh terkejut elektrik. Beritahu orang dewasa."
+    },
+    {
+      "s": "Bermain di tepi kolam tanpa orang dewasa",
+      "safe": false,
+      "why": "Kolam dalam berbahaya. Sentiasa bersama orang dewasa."
+    },
+    {
+      "s": "Melintas jalan sambil melihat telefon",
+      "safe": false,
+      "why": "Kita perlu lihat kiri dan kanan, bukan skrin telefon."
+    },
+    {
+      "s": "Menaiki kereta orang yang tidak dikenali",
+      "safe": false,
+      "why": "Jangan naik kereta orang asing. Kata tidak, pergi, beritahu."
+    },
+    {
+      "s": "Membelah rahsia keluarga kepada orang yang tidak dikenali di internet",
+      "safe": false,
+      "why": "Maklumat peribadi jangan dikongsi dengan orang asing."
+    },
+    {
+      "s": "Meminjam basikal rakan dengan izinnya",
+      "safe": true,
+      "why": "Meminta izin dahulu ialah perkara yang baik."
+    },
+    {
+      "s": "Makan ubat tanpa arahan orang dewasa",
+      "safe": false,
+      "why": "Ubat hanya selamat dengan arahan orang dewasa."
+    },
+    {
+      "s": "Memakai pelampung ketika bermain di kolam",
+      "safe": true,
+      "why": "Pelampung membantu kita terapung dengan selamat."
+    }
+  ],
+  "askFirst": [
+    {
+      "s": "Anda mahu meminjam pensel rakan sekelas",
+      "correct": "Boleh saya pinjam pensel awak?",
+      "wrong": [
+        "Beri saya pensel awak sekarang!",
+        "Ambil sahaja pensel itu tanpa bertanya",
+        "Buang pensel awak"
+      ]
+    },
+    {
+      "s": "Anda mahu masuk ke bilik kakak sedang belajar",
+      "correct": "Boleh saya masuk ke bilik awak?",
+      "wrong": [
+        "Terus masuk tanpa mengetuk",
+        "Buka pintu dengan kuat",
+        "Menyorok di bawah katil"
+      ]
+    },
+    {
+      "s": "Anda mahu bermain dengan mainan adik",
+      "correct": "Boleh saya main mainan awak sekejap?",
+      "wrong": [
+        "Rampas mainan itu",
+        "Menangis sehingga diberi",
+        "Ambil dan lari"
+      ]
+    },
+    {
+      "s": "Anda mahu mengambil gula-gula di atas meja ibu",
+      "correct": "Boleh saya ambil gula-gula ini?",
+      "wrong": [
+        "Ambil senyap-senyap",
+        "Makan semua tanpa bertanya",
+        "Sorokkan bungkusannya"
+      ]
+    },
+    {
+      "s": "Anda mahu menggunakan komputer di perpustakaan",
+      "correct": "Boleh saya guna komputer ini sebentar?",
+      "wrong": [
+        "Terus guna tanpa bertanya",
+        "Tarik kerusi orang lain",
+        "Matikan komputer orang lain"
+      ]
+    },
+    {
+      "s": "Anda mahu melihat buku cerita yang sedang dibaca kawan",
+      "correct": "Boleh saya lihat buku awak?",
+      "wrong": [
+        "Tarik buku dari tangan kawan",
+        "Sorokkan buku itu",
+        "Menangis untuk buku"
+      ]
+    }
+  ],
+  "whatDo": [
+    {
+      "s": "Anda ternampak kaca pecah di lantai sekolah",
+      "options": [
+        {
+          "t": "Beritahu cikgu dengan segera",
+          "best": true,
+          "why": "Orang dewasa boleh membersihkannya dengan selamat."
+        },
+        {
+          "t": "Sentuh dan kutip kaca itu",
+          "best": false,
+          "why": "Kaca pecah boleh melukakan tangan kita."
+        },
+        {
+          "t": "Buat-buat tidak nampak",
+          "best": false,
+          "why": "Rakan lain mungkin tercedera. Beritahu orang dewasa."
+        }
+      ]
+    },
+    {
+      "s": "Rakan anda kelihatan sedih kerana hilang penselnya",
+      "options": [
+        {
+          "t": "Tanya jika anda boleh membantu",
+          "best": true,
+          "why": "Menolong rakan membuatkan mereka berasa lebih baik."
+        },
+        {
+          "t": "Ketawakan rakan itu",
+          "best": false,
+          "why": "Menggelakkan rakan boleh menyakiti hatinya."
+        },
+        {
+          "t": "Abaikan sahaja",
+          "best": false,
+          "why": "Sedikit pertolongan boleh menyerahkan harinya."
+        }
+      ]
+    },
+    {
+      "s": "Anda tersesat di pusat membeli-belah",
+      "options": [
+        {
+          "t": "Kekal di tempat dan cari pekerja pusat",
+          "best": true,
+          "why": "Berdiam di tempat dan minta bantuan pekerja ialah langkah selamat."
+        },
+        {
+          "t": "Jalan jauh mencari sendiri",
+          "best": false,
+          "why": "Berjalan jauh membuatkan kita lebih sukar dijumpai."
+        },
+        {
+          "t": "Ikut orang yang tidak dikenali",
+          "best": false,
+          "why": "Jangan ikut orang asing. Cari pekerja beruniform."
+        }
+      ]
+    },
+    {
+      "s": "Kerja rumah matematik terlalu sukar untuk anda",
+      "options": [
+        {
+          "t": "Minta cikgu atau ibu bapa menerangkan",
+          "best": true,
+          "why": "Meminta bantuan ialah cara belajar yang bijak."
+        },
+        {
+          "t": "Tulis jawapan rawak sahaja",
+          "best": false,
+          "why": "Kita tidak belajar apa-apa daripada jawapan rawak."
+        },
+        {
+          "t": "Tidak hantar langsungan",
+          "best": false,
+          "why": "Cuba dahulu, kemudian minta bantuan jika perlu."
+        }
+      ]
+    },
+    {
+      "s": "Anda nampak rakan lain dibuli di padang",
+      "options": [
+        {
+          "t": "Beritahu cikgu dengan segera",
+          "best": true,
+          "why": "Melapor kepada cikgu membantu mangsa dengan selamat."
+        },
+        {
+          "t": "Sertai membuli supaya tidak dibuli",
+          "best": false,
+          "why": "Membuli menyakitkan orang lain — itu tidak baik."
+        },
+        {
+          "t": "Tonton sahaja dari jauh",
+          "best": false,
+          "why": "Diam bermakna tiada siapa menolong mangsa."
+        }
+      ]
+    },
+    {
+      "s": "Anda terjatuh dan lutut berdarah sedikit",
+      "options": [
+        {
+          "t": "Beritahu orang dewasa dan cuci luka",
+          "best": true,
+          "why": "Luka perlu dibersihkan supaya tidak berjangkit."
+        },
+        {
+          "t": "Tutup dengan tangan yang kotor",
+          "best": false,
+          "why": "Tangan kotor boleh membawa kuman ke dalam luka."
+        },
+        {
+          "t": "Abaikan sehingga ia sembuh sendiri",
+          "best": false,
+          "why": "Luka perlu dijaga supaya cepat sembuh."
+        }
+      ]
+    },
+    {
+      "s": "Adik anda meminta mainan yang sedang anda guna",
+      "options": [
+        {
+          "t": "Minta dia menunggu sekejap, kemudian berkongsi",
+          "best": true,
+          "why": "Berkongsi menunjukkan kita penyayang."
+        },
+        {
+          "t": "Jangan berkongsi langsung",
+          "best": false,
+          "why": "Berkongsi menggembirakan semua orang."
+        },
+        {
+          "t": "Ambil mainan adik sebagai balasan",
+          "best": false,
+          "why": "Mengambil barang orang lain tanpa izin tidak baik."
+        }
+      ]
+    }
+  ],
+  "road": [
+    {
+      "type": "light",
+      "q": "Lampu isyarat merah menyala. Apa yang perlu anda buat?",
+      "choices": [
+        "Berhenti dan tunggu",
+        "Terus melintas dengan cepat",
+        "Lari ke tengah jalan"
+      ],
+      "answer": 0,
+      "why": "Merah bermakna berhenti — kenderaan sedang bergerak."
+    },
+    {
+      "type": "light",
+      "q": "Lampu isyarat hijau menyala untuk pejalan kaki. Apa itu maksudnya?",
+      "choices": [
+        "Selamat untuk melintas",
+        "Kenderaan akan laju",
+        "Tutup mata dan lintas"
+      ],
+      "answer": 0,
+      "why": "Hijau untuk pejalan bermakna giliran kita melintas."
+    },
+    {
+      "type": "light",
+      "q": "Sebelum melintas di lintasan zebra, kita perlu…",
+      "choices": [
+        "Lihat kiri dan kanan",
+        "Bermain telefon",
+        "Menutup mata"
+      ],
+      "answer": 0,
+      "why": "Sentiasa lihat kiri dan kanan walaupun di zebra."
+    },
+    {
+      "type": "light",
+      "q": "Berbasikal di jalan raya memerlukan kita memakai…",
+      "choices": [
+        "Topi keledar",
+        "Topi jerami",
+        "Tidak ada apa-apa"
+      ],
+      "answer": 0,
+      "why": "Topi keledar melindungi kepala kita."
+    },
+    {
+      "type": "light",
+      "q": "Tempat paling selamat untuk melintas jalan ialah…",
+      "choices": [
+        "Lintasan zebra / isyarat pejalan",
+        "Mana-mana sahaja",
+        "Di selekoh jalan"
+      ],
+      "answer": 0,
+      "why": "Lintasan zebra dan isyarat direka untuk keselamatan pejalan kaki."
+    },
+    {
+      "type": "light",
+      "q": "Apabila bas sekolah berhenti, kita perlu…",
+      "choices": [
+        "Menunggu bas berhenti sepenuhnya sebelum turun",
+        "Melompat keluar dengan cepat",
+        "Menjerit dengan kuat"
+      ],
+      "answer": 0,
+      "why": "Tunggu bas berhenti sepenuhnya supaya kita tidak terjatuh."
+    },
+    {
+      "type": "light",
+      "q": "Berjalan pada waktu malam, sebaiknya memakai pakaian…",
+      "choices": [
+        "Berwarna terang / reflektor",
+        "Hitam gelap",
+        "Tidak penting"
+      ],
+      "answer": 0,
+      "why": "Warna terang membantu pemandu nampak kita."
+    },
+    {
+      "type": "light",
+      "q": "Bermain bola yang jatuh ke jalan raya. Apa yang anda buat?",
+      "choices": [
+        "Minta orang dewasa mengambilnya",
+        "Terus kejar bola",
+        "Tunggu di tengah jalan"
+      ],
+      "answer": 0,
+      "why": "Jalan raya berbahaya — orang dewasa lebih selamat mengambilnya."
+    }
+  ],
+  "personalSpace": [
+    {
+      "s": "Ibu ingin memeluk anda goodbye",
+      "who": "keluarga",
+      "answer": "dekat",
+      "why": "Keluarga terdekat boleh berada hampir — tetapi sentiasa ikut rasa selesa anda."
+    },
+    {
+      "s": "Kawan baik ingin berbual dengan anda",
+      "who": "kawan",
+      "answer": "sederhana",
+      "why": "Kawan berada pada jarak sederhana — kira-kira satu lengan."
+    },
+    {
+      "s": "Orang baharu dikenali ingin berbual",
+      "who": "baru",
+      "answer": "jauh",
+      "why": "Dengan orang baru, jarak lebih jauh lebih selesa dan sopan."
+    },
+    {
+      "s": "Cikgu menerangkan pelajaran di kelas",
+      "who": "cikgu",
+      "answer": "sederhana",
+      "why": "Jarak kelas yang selesa untuk mendengar dengan jelas."
+    },
+    {
+      "s": "Pekerja kedai memberi resit kepada anda",
+      "who": "baru",
+      "answer": "jauh",
+      "why": "Dengan orang yang baru kita jumpa, jarak jauh adalah sopan."
+    },
+    {
+      "s": "Adik kecil ingin bermain dengan anda",
+      "who": "keluarga",
+      "answer": "dekat",
+      "why": "Keluarga boleh bermain hampir dengan kita."
+    }
+  ]
+}

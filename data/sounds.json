@@ -1,0 +1,30 @@
+{
+  "items": [
+    { "id": "lembu", "label": "Lembu", "emoji": "🐄", "cat": "haiwan", "recipe": "moo" },
+    { "id": "kucing", "label": "Kucing", "emoji": "🐱", "cat": "haiwan", "recipe": "meow" },
+    { "id": "itik", "label": "Itik", "emoji": "🦆", "cat": "haiwan", "recipe": "quack" },
+    { "id": "burung", "label": "Burung", "emoji": "🐦", "cat": "haiwan", "recipe": "chirp" },
+    { "id": "burunghantu", "label": "Burung Hantu", "emoji": "🦉", "cat": "haiwan", "recipe": "owl" },
+    { "id": "katak", "label": "Katak", "emoji": "🐸", "cat": "haiwan", "recipe": "frog" },
+    { "id": "kereta", "label": "Kereta", "emoji": "🚗", "cat": "kenderaan", "recipe": "engine" },
+    { "id": "lokomotif", "label": "Kereta Api", "emoji": "🚂", "cat": "kenderaan", "recipe": "train" },
+    { "id": "ambulan", "label": "Ambulan", "emoji": "🚑", "cat": "kenderaan", "recipe": "siren" },
+    { "id": "kapal", "label": "Kapal", "emoji": "🚢", "cat": "kenderaan", "recipe": "boat" },
+    { "id": "hujan", "label": "Hujan", "emoji": "🌧️", "cat": "alam", "recipe": "rain" },
+    { "id": "angin", "label": "Angin", "emoji": "🌬️", "cat": "alam", "recipe": "wind" },
+    { "id": "ombak", "label": "Ombak", "emoji": "🌊", "cat": "alam", "recipe": "wave" },
+    { "id": "ribut", "label": "Ribut", "emoji": "⛈️", "cat": "alam", "recipe": "thunder" },
+    { "id": "lebah", "label": "Lebah", "emoji": "🐝", "cat": "alam", "recipe": "bee" },
+    { "id": "loceng", "label": "Loceng", "emoji": "🔔", "cat": "objek", "recipe": "bell" },
+    { "id": "jam", "label": "Jam", "emoji": "⏰", "cat": "objek", "recipe": "clock" },
+    { "id": "dram", "label": "Dram", "emoji": "🥁", "cat": "objek", "recipe": "drum" },
+    { "id": "belon", "label": "Belon", "emoji": "🎈", "cat": "objek", "recipe": "pop" },
+    { "id": "klakson", "label": "Hon Kereta", "emoji": "📢", "cat": "kenderaan", "recipe": "horn" }
+  ],
+  "cats": {
+    "haiwan": { "label": "Haiwan", "emoji": "🐾" },
+    "kenderaan": { "label": "Kenderaan", "emoji": "🚗" },
+    "alam": { "label": "Alam", "emoji": "🌳" },
+    "objek": { "label": "Objek", "emoji": "🔔" }
+  }
+}

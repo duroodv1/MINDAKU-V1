@@ -1,0 +1,766 @@
+{
+  "analogies": [
+    {
+      "a": "Panas",
+      "b": "Matahari",
+      "c": "Sejuk",
+      "d": "Air batu"
+    },
+    {
+      "a": "Basah",
+      "b": "Hujan",
+      "c": "Kering",
+      "d": "Matahari"
+    },
+    {
+      "a": "Burung",
+      "b": "Sarang",
+      "c": "Ikan",
+      "d": "Akuarium"
+    },
+    {
+      "a": "Kaki",
+      "b": "Kasut",
+      "c": "Tangan",
+      "d": "Sarung tangan"
+    },
+    {
+      "a": "Mata",
+      "b": "Melihat",
+      "c": "Telinga",
+      "d": "Mendengar"
+    },
+    {
+      "a": "Bunga",
+      "b": "Taman",
+      "c": "Ikan",
+      "d": "Kolam"
+    },
+    {
+      "a": "Pensel",
+      "b": "Menulis",
+      "c": "Sikat",
+      "d": "Menyikat"
+    },
+    {
+      "a": "Anak ayam",
+      "b": "Ayam",
+      "c": "Anak kucing",
+      "d": "Kucing"
+    },
+    {
+      "a": "Malam",
+      "b": "Bulan",
+      "c": "Siang",
+      "d": "Matahari"
+    },
+    {
+      "a": "Doktor",
+      "b": "Hospital",
+      "c": "Cikgu",
+      "d": "Sekolah"
+    },
+    {
+      "a": "Nelayan",
+      "b": "Bot",
+      "c": "Pemandu",
+      "d": "Kereta"
+    },
+    {
+      "a": "Ais",
+      "b": "Sejuk",
+      "c": "Api",
+      "d": "Panas"
+    },
+    {
+      "a": "Buku",
+      "b": "Membaca",
+      "c": "Muzik",
+      "d": "Mendengar"
+    },
+    {
+      "a": "Kucing",
+      "b": "Miau",
+      "c": "Lembu",
+      "d": "Moo"
+    },
+    {
+      "a": "Pokok",
+      "b": "Daun",
+      "c": "Bunga",
+      "d": "Kelopak"
+    },
+    {
+      "a": "Muzium",
+      "b": "Barang lama",
+      "c": "Pasar",
+      "d": "Barang jualan"
+    },
+    {
+      "a": "Pensel",
+      "b": "Kertas",
+      "c": "Berus",
+      "d": "Kanvas"
+    },
+    {
+      "a": "Beku",
+      "b": "Ais",
+      "c": "Cair",
+      "d": "Air"
+    },
+    {
+      "a": "Penyanyi",
+      "b": "Lagu",
+      "c": "Pelukis",
+      "d": "Lukisan"
+    },
+    {
+      "a": "Pembakar roti",
+      "b": "Roti",
+      "c": "Tukang masak",
+      "d": "Nasi"
+    }
+  ],
+  "oddOne": [
+    {
+      "items": [
+        "🍎",
+        "🍌",
+        "🍊",
+        "🚗"
+      ],
+      "odd": "🚗",
+      "why": "Kereta bukan buah-buahan."
+    },
+    {
+      "items": [
+        "🐶",
+        "🐱",
+        "🐹",
+        "🍕"
+      ],
+      "odd": "🍕",
+      "why": "Pizza bukan haiwan."
+    },
+    {
+      "items": [
+        "🚗",
+        "🚌",
+        "🚲",
+        "🌳"
+      ],
+      "odd": "🌳",
+      "why": "Pokok bukan kenderaan."
+    },
+    {
+      "items": [
+        "⚽",
+        "🏀",
+        "🎾",
+        "🥕"
+      ],
+      "odd": "🥕",
+      "why": "Lobak bukan bola permainan."
+    },
+    {
+      "items": [
+        "☀️",
+        "🌙",
+        "⭐",
+        "🪑"
+      ],
+      "odd": "🪑",
+      "why": "Kerusi bukan objek di langit."
+    },
+    {
+      "items": [
+        "🥕",
+        "🥔",
+        "🥬",
+        "🍩"
+      ],
+      "odd": "🍩",
+      "why": "Donat bukan sayur."
+    },
+    {
+      "items": [
+        "👕",
+        "👖",
+        "🧦",
+        "🍦"
+      ],
+      "odd": "🍦",
+      "why": "Aiskrim bukan pakaian."
+    },
+    {
+      "items": [
+        "📚",
+        "✏️",
+        "📏",
+        "🍌"
+      ],
+      "odd": "🍌",
+      "why": "Pisang bukan alat tulis."
+    },
+    {
+      "items": [
+        "🐸",
+        "🐟",
+        "🦆",
+        "🐄"
+      ],
+      "odd": "🐄",
+      "why": "Lembu tidak hidup di air."
+    },
+    {
+      "items": [
+        "🥁",
+        "🎸",
+        "🎻",
+        "🧁"
+      ],
+      "odd": "🧁",
+      "why": "Kek bukan alat muzik."
+    },
+    {
+      "items": [
+        "🌧️",
+        "⛈️",
+        "🌈",
+        "🔥"
+      ],
+      "odd": "🔥",
+      "why": "Api bukan cuaca langit."
+    },
+    {
+      "items": [
+        "🏠",
+        "🏢",
+        "🏫",
+        "🍑"
+      ],
+      "odd": "🍑",
+      "why": "Bukan bangunan."
+    },
+    {
+      "items": [
+        "✈️",
+        "🚀",
+        "🚂",
+        "🐘"
+      ],
+      "odd": "🐘",
+      "why": "Gajah bukan kenderaan."
+    },
+    {
+      "items": [
+        "👩‍⚕️",
+        "👨‍🏫",
+        "👩‍🌾",
+        "🤖"
+      ],
+      "odd": "🤖",
+      "why": "Robot bukan manusia."
+    }
+  ],
+  "sentences": [
+    {
+      "words": [
+        "Ali",
+        "makan",
+        "nasi"
+      ],
+      "display": "Ali makan nasi."
+    },
+    {
+      "words": [
+        "Siti",
+        "membaca",
+        "buku"
+      ],
+      "display": "Siti membaca buku."
+    },
+    {
+      "words": [
+        "Kami",
+        "bermain",
+        "bola"
+      ],
+      "display": "Kami bermain bola."
+    },
+    {
+      "words": [
+        "Adik",
+        "menangis",
+        "sebab",
+        "lapar"
+      ],
+      "display": "Adik menangis sebab lapar."
+    },
+    {
+      "words": [
+        "Ayah",
+        "membeli",
+        "ikan",
+        "segar"
+      ],
+      "display": "Ayah membeli ikan segar."
+    },
+    {
+      "words": [
+        "Burung",
+        "itu",
+        "terbang",
+        "ke",
+        "sarang"
+      ],
+      "display": "Burung itu terbang ke sarang."
+    },
+    {
+      "words": [
+        "Cikgu",
+        "mengajar",
+        "kami",
+        "matematik"
+      ],
+      "display": "Cikgu mengajar kami matematik."
+    },
+    {
+      "words": [
+        "Kucing",
+        "hitam",
+        "tidur",
+        "di",
+        "sofa"
+      ],
+      "display": "Kucing hitam tidur di sofa."
+    },
+    {
+      "words": [
+        "Saya",
+        "suka",
+        "makan",
+        "buah",
+        "segar"
+      ],
+      "display": "Saya suka makan buah segar."
+    },
+    {
+      "words": [
+        "Hujan",
+        "turun",
+        "sepanjang",
+        "petang"
+      ],
+      "display": "Hujan turun sepanjang petang."
+    },
+    {
+      "words": [
+        "Rakan",
+        "saya",
+        "bermain",
+        "di",
+        "padang",
+        "sekolah"
+      ],
+      "display": "Rakan saya bermain di padang sekolah."
+    },
+    {
+      "words": [
+        "Nenek",
+        "menyediakan",
+        "kuih",
+        "sedap",
+        "untuk",
+        "kami"
+      ],
+      "display": "Nenek menyediakan kuih sedap untuk kami."
+    },
+    {
+      "words": [
+        "Bot",
+        "kecil",
+        "itu",
+        "berlayar",
+        "perlahan"
+      ],
+      "display": "Bot kecil itu berlayar perlahan."
+    },
+    {
+      "words": [
+        "Pelajar",
+        "rajim",
+        "sentiasa",
+        "mengulang",
+        "kaji"
+      ],
+      "display": "Pelajar rajin sentiasa mengulang kaji."
+    },
+    {
+      "words": [
+        "Pokok",
+        "bunga",
+        "itu",
+        "mekar",
+        "indah",
+        "sekali"
+      ],
+      "display": "Pokok bunga itu mekar indah sekali."
+    }
+  ],
+  "logic": {
+    "names": [
+      "Ali",
+      "Abu",
+      "Bakar",
+      "Moli",
+      "Diana"
+    ],
+    "templates": [
+      {
+        "type": "tallest",
+        "text": "{a} lebih tinggi daripada {b}. {b} lebih tinggi daripada {c}. Siapa paling tinggi?",
+        "answer": "a"
+      },
+      {
+        "type": "shortest",
+        "text": "{a} lebih pendek daripada {b}. {b} lebih pendek daripada {c}. Siapa paling pendek?",
+        "answer": "a"
+      },
+      {
+        "type": "oldest",
+        "text": "{a} lebih tua daripada {b}. {b} lebih tua daripada {c}. Siapa paling tua?",
+        "answer": "a"
+      },
+      {
+        "type": "youngest",
+        "text": "{a} lebih muda daripada {b}. {b} lebih muda daripada {c}. Siapa paling muda?",
+        "answer": "a"
+      },
+      {
+        "type": "position",
+        "text": "{a} berdiri paling depan. {b} berdiri di belakang {a}. Siapa di tengah-tengah barisan?",
+        "answer": "b"
+      },
+      {
+        "type": "biggest",
+        "text": "Objek {a} lebih besar daripada {b}. {b} lebih besar daripada {c}. Susunan dari besar ke kecil ialah…",
+        "answer": "a,b,c"
+      }
+    ],
+    "objects": [
+      {
+        "set": [
+          "bola sepak",
+          "bola tenis",
+          "bola ping pong"
+        ],
+        "by": "saiz"
+      },
+      {
+        "set": [
+          "gajah",
+          "kuda",
+          "kucing"
+        ],
+        "by": "saiz"
+      },
+      {
+        "set": [
+          "botol besar",
+          "gelas",
+          "sudu"
+        ],
+        "by": "saiz"
+      }
+    ]
+  },
+  "colors": {
+    "primary": [
+      {
+        "id": "merah",
+        "label": "Merah",
+        "hex": "#E05252",
+        "emoji": "🔴"
+      },
+      {
+        "id": "kuning",
+        "label": "Kuning",
+        "hex": "#F0C93B",
+        "emoji": "🟡"
+      },
+      {
+        "id": "biru",
+        "label": "Biru",
+        "hex": "#4C7FD9",
+        "emoji": "🔵"
+      }
+    ],
+    "secondary": [
+      {
+        "id": "oren",
+        "label": "Oren",
+        "mix": [
+          "merah",
+          "kuning"
+        ],
+        "hex": "#E8833A"
+      },
+      {
+        "id": "hijau",
+        "label": "Hijau",
+        "mix": [
+          "kuning",
+          "biru"
+        ],
+        "hex": "#5FA97C"
+      },
+      {
+        "id": "ungu",
+        "label": "Ungu",
+        "mix": [
+          "merah",
+          "biru"
+        ],
+        "hex": "#8A5FBF"
+      }
+    ],
+    "tertiary": [
+      {
+        "id": "oren-merah",
+        "label": "Oren Kemerahan",
+        "mix": [
+          "merah",
+          "oren"
+        ],
+        "hex": "#DD6B4F"
+      },
+      {
+        "id": "oren-kuningan",
+        "label": "Oren Kekuningan",
+        "mix": [
+          "kuning",
+          "oren"
+        ],
+        "hex": "#EFA94A"
+      },
+      {
+        "id": "hijau-kuningan",
+        "label": "Hijau Kekuningan",
+        "mix": [
+          "kuning",
+          "hijau"
+        ],
+        "hex": "#9BBD5F"
+      },
+      {
+        "id": "hijau-kebiruan",
+        "label": "Hijau Kebiruan",
+        "mix": [
+          "biru",
+          "hijau"
+        ],
+        "hex": "#4C9BA8"
+      },
+      {
+        "id": "ungu-kebiruan",
+        "label": "Ungu Kebiruan",
+        "mix": [
+          "biru",
+          "ungu"
+        ],
+        "hex": "#6A5FC9"
+      },
+      {
+        "id": "ungu-kemerahan",
+        "label": "Ungu Kemerahan",
+        "mix": [
+          "merah",
+          "ungu"
+        ],
+        "hex": "#A85F9E"
+      }
+    ]
+  },
+  "angles": {
+    "types": [
+      {
+        "id": "kecil",
+        "label": "Sudut Kecil",
+        "range": [
+          10,
+          60
+        ],
+        "desc": "kurang daripada 90°"
+      },
+      {
+        "id": "tepat",
+        "label": "Sudut Tepat",
+        "range": [
+          90,
+          90
+        ],
+        "desc": "tepat 90°, seperti penjuru buku"
+      },
+      {
+        "id": "besar",
+        "label": "Sudut Besar",
+        "range": [
+          120,
+          170
+        ],
+        "desc": "lebih daripada 90°"
+      }
+    ]
+  },
+  "objectHunt": {
+    "scenes": [
+      {
+        "id": "bilik",
+        "label": "Bilik Tidur",
+        "emoji": "🛏️",
+        "props": [
+          "🛏️",
+          "🪑",
+          "🪟",
+          "🧸",
+          "📚",
+          "👕",
+          "🧦",
+          "💡",
+          "🖼️"
+        ],
+        "bg": "#F4EFE3",
+        "targets": [
+          "🧸",
+          "📚",
+          "🧦",
+          "🎫",
+          "🔑",
+          "🪀"
+        ]
+      },
+      {
+        "id": "taman",
+        "label": "Taman",
+        "emoji": "🌳",
+        "props": [
+          "🌳",
+          "🌻",
+          "🦋",
+          "🐦",
+          "🍄",
+          "🪨",
+          "⛲",
+          "🌻",
+          "🌿"
+        ],
+        "bg": "#E8F0E0",
+        "targets": [
+          "🦋",
+          "🐦",
+          "🍄",
+          "🐞",
+          "🦆",
+          "🐌"
+        ]
+      },
+      {
+        "id": "kelas",
+        "label": "Bilik Darjah",
+        "emoji": "🏫",
+        "props": [
+          "🪑",
+          "📚",
+          "🖊️",
+          "🧮",
+          "🌍",
+          "🕐",
+          "🧹",
+          "📝"
+        ],
+        "bg": "#F0EBDF",
+        "targets": [
+          "🖊️",
+          "🧮",
+          "🌍",
+          "🧹",
+          "📐",
+          "📎"
+        ]
+      },
+      {
+        "id": "rakmainan",
+        "label": "Rak Mainan",
+        "emoji": "🧸",
+        "props": [
+          "🧸",
+          "🚗",
+          "🪀",
+          "⚽",
+          "🧩",
+          "🎲",
+          "🪁",
+          "🤖"
+        ],
+        "bg": "#F7E8F0",
+        "targets": [
+          "🧩",
+          "🎲",
+          "🪁",
+          "🤖",
+          "🎈",
+          "🎠"
+        ]
+      },
+      {
+        "id": "dapur",
+        "label": "Dapur",
+        "emoji": "🍳",
+        "props": [
+          "🍳",
+          "🥘",
+          "🔪",
+          "🧂",
+          "🫙",
+          "🥄",
+          "🍚",
+          "🍲"
+        ],
+        "bg": "#F4EAD8",
+        "targets": [
+          "🥄",
+          "🫙",
+          "🧂",
+          "🥣",
+          "🧑‍🍳",
+          "🫖"
+        ]
+      },
+      {
+        "id": "pantai",
+        "label": "Pantai",
+        "emoji": "🏖️",
+        "props": [
+          "🌴",
+          "🌊",
+          "🐚",
+          "☀️",
+          "🩴",
+          "🪣",
+          "⛵",
+          "⛱️"
+        ],
+        "bg": "#E4F0F4",
+        "targets": [
+          "🐚",
+          "🪣",
+          "⛵",
+          "⛱️",
+          "🦀",
+          "🐬"
+        ]
+      }
+    ]
+  }
+}

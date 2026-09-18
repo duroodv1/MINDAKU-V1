@@ -1,0 +1,300 @@
+{
+  "habitats": [
+    {
+      "id": "laut",
+      "label": "Laut",
+      "emoji": "🌊",
+      "animals": [
+        "IKAN PAUS",
+        "IKAN YU",
+        "KETAM",
+        "BURUNG CAMAR",
+        "SOTONG"
+      ],
+      "fact": "Laut masin dan luas — ramai haiwan tinggal di dalam air."
+    },
+    {
+      "id": "hutan",
+      "label": "Hutan",
+      "emoji": "🌳",
+      "animals": [
+        "HARIMAU",
+        "GAJAH",
+        "MONYET",
+        "BADAK",
+        "BURUNG ENGGANG"
+      ],
+      "fact": "Hutan hujan panas dan lembap, penuh pokok besar."
+    },
+    {
+      "id": "padangpasir",
+      "label": "Padang Pasir",
+      "emoji": "🏜️",
+      "animals": [
+        "UNTA",
+        "KALA JENGKING",
+        "ULAR PADANG PASIR",
+        "TIKUS KAKTUS"
+      ],
+      "fact": "Padang pasir sangat panas siang dan sejuk malam."
+    },
+    {
+      "id": "artik",
+      "label": "Artik",
+      "emoji": "🧊",
+      "animals": [
+        "BERUANG KUTUB",
+        "PINGUIN",
+        "ANJING LAUT",
+        "RUSA KUTUB"
+      ],
+      "fact": "Artik sangat sejuk dan disalji putih."
+    },
+    {
+      "id": "sungai",
+      "label": "Sungai",
+      "emoji": "🏞️",
+      "animals": [
+        "BUAYA",
+        "IKAN HARUAN",
+        "UDANG",
+        "KETAM SUNGAI",
+        "BERUK"
+      ],
+      "fact": "Sungai air tawar mengalir ke laut."
+    }
+  ],
+  "animalFacts": {
+    "IKAN PAUS": "Paus ialah mamalia terbesar di laut.",
+    "HARIMAU": "Harimau ialah pemangsa terbesar di hutan Malaysia.",
+    "UNTA": "Unta menyimpan lemak di dalam bonggolnya.",
+    "PINGUIN": "Pinguin burung yang berenang tetapi tidak terbang.",
+    "BUAYA": "Buaya menyembam dengan mata dan hidung di atas air."
+  },
+  "weather": [
+    {
+      "id": "cerah",
+      "label": "Cerah",
+      "emoji": "☀️",
+      "wear": [
+        "Topi",
+        "Cermin mata hitam",
+        "Baju nipis"
+      ],
+      "notWear": [
+        "Kot tebal",
+        "Payung"
+      ],
+      "activity": [
+        "Bermain di taman",
+        "Mengayuh basikal"
+      ],
+      "notActivity": [
+        "Tidur sepanjang hari"
+      ],
+      "why": "Hari cerah panas — lindungi diri daripada matahari."
+    },
+    {
+      "id": "hujan",
+      "label": "Hujan",
+      "emoji": "🌧️",
+      "wear": [
+        "Payung",
+        "Kot hujan",
+        "Kasut hujan"
+      ],
+      "notWear": [
+        "Baju nipis"
+      ],
+      "activity": [
+        "Membaca buku di rumah",
+        "Bermain permainan papan"
+      ],
+      "notActivity": [
+        "Bermain di luar"
+      ],
+      "why": "Hujan basah — payung dan kot hujan membantu kita kering."
+    },
+    {
+      "id": "mendung",
+      "label": "Mendung",
+      "emoji": "☁️",
+      "wear": [
+        "Baju selesa",
+        "Jaket nipis"
+      ],
+      "notWear": [
+        "Topi jerami"
+      ],
+      "activity": [
+        "Berjalan-jalan",
+        "Terbang layang"
+      ],
+      "notActivity": [
+        "Mandi sungai"
+      ],
+      "why": "Mendung — langit kelabu, mungkin hujan akan turun."
+    },
+    {
+      "id": "ribut",
+      "label": "Ribut",
+      "emoji": "⛈️",
+      "wear": [
+        "Kekal di dalam rumah"
+      ],
+      "notWear": [
+        "Payung besar di luar"
+      ],
+      "activity": [
+        "Bermain dalam rumah",
+        "Mewarna"
+      ],
+      "notActivity": [
+        "Berbasikal",
+        "Bermain di padang"
+      ],
+      "why": "Ribut berbahaya — selamatkan diri di dalam rumah."
+    },
+    {
+      "id": "pelangi",
+      "label": "Pelangi",
+      "emoji": "🌈",
+      "wear": [
+        "Baju biasa"
+      ],
+      "notWear": [
+        "Cermin mata hitam malam"
+      ],
+      "activity": [
+        "Melihat pelangi",
+        "Melukis pelangi"
+      ],
+      "notActivity": [
+        "Memanjat pokok tinggi"
+      ],
+      "why": "Pelangi muncul selepas hujan — cantik dan selamat dilihat."
+    },
+    {
+      "id": "berangin",
+      "label": "Berangin",
+      "emoji": "🌬️",
+      "wear": [
+        "Jaket nipis"
+      ],
+      "notWear": [
+        "Topi jerami longgar"
+      ],
+      "activity": [
+        "Terbang layang",
+        "Bermain bola"
+      ],
+      "notActivity": [
+        "Memegang payung besar"
+      ],
+      "why": "Angin kencang — berhati-hati dengan objek ringan."
+    }
+  ],
+  "plants": [
+    {
+      "id": "akar",
+      "label": "Akar",
+      "emoji": "🌿",
+      "func": "Menyerap air dan zat makanan dari tanah",
+      "pos": "bawah"
+    },
+    {
+      "id": "batang",
+      "label": "Batang",
+      "emoji": "🪵",
+      "func": "Menyokong tumbuhan dan mengalirkan air",
+      "pos": "tengah"
+    },
+    {
+      "id": "daun",
+      "label": "Daun",
+      "emoji": "🍃",
+      "func": "Membuat makanan dengan cahaya matahari",
+      "pos": "atas"
+    },
+    {
+      "id": "bunga",
+      "label": "Bunga",
+      "emoji": "🌸",
+      "func": "Menjadi buah selepas pendebungaan",
+      "pos": "atas"
+    },
+    {
+      "id": "buah",
+      "label": "Buah",
+      "emoji": "🍎",
+      "func": "Menyimpan biji untuk tumbuhan baharu",
+      "pos": "atas"
+    }
+  ],
+  "planets": [
+    {
+      "id": "merkurius",
+      "label": "Merkurius",
+      "color": "#B7AFA6",
+      "size": 6,
+      "ring": false,
+      "fact": "Planet paling hampir dengan Matahari dan paling kecil."
+    },
+    {
+      "id": "zuhrah",
+      "label": "Zuhrah",
+      "color": "#E8C547",
+      "size": 10,
+      "ring": false,
+      "fact": "Planet paling panas, diselubungi awan tebal."
+    },
+    {
+      "id": "bumi",
+      "label": "Bumi",
+      "color": "#4C90D9",
+      "size": 11,
+      "ring": false,
+      "fact": "Planet kita — satu-satunya yang ada kehidupan diketahui."
+    },
+    {
+      "id": "marikh",
+      "label": "Marikh",
+      "color": "#D96C4F",
+      "size": 8,
+      "ring": false,
+      "fact": "Planet merah, ada gunung tertinggi di sistem suria."
+    },
+    {
+      "id": "musytari",
+      "label": "Musytari",
+      "color": "#D9A066",
+      "size": 22,
+      "ring": true,
+      "fact": "Planet terbesar — lebih 1,300 Bumi boleh masuk!"
+    },
+    {
+      "id": "saturnus",
+      "label": "Saturnus",
+      "color": "#E3CE9A",
+      "size": 19,
+      "ring": true,
+      "fact": "Terkenal dengan cincin cantik daripada ais dan batu."
+    },
+    {
+      "id": "uranus",
+      "label": "Uranus",
+      "color": "#9AD1D4",
+      "size": 15,
+      "ring": true,
+      "fact": "Berputar mengiring seperti bola menggolek."
+    },
+    {
+      "id": "neptun",
+      "label": "Neptun",
+      "color": "#4C6FD9",
+      "size": 14,
+      "ring": false,
+      "fact": "Planet paling jauh, berwarna biru tua."
+    }
+  ]
+}

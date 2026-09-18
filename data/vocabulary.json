@@ -1,0 +1,543 @@
+{
+  "words": [
+    {
+      "w": "BUKU",
+      "e": "📚",
+      "cat": "sekolah"
+    },
+    {
+      "w": "PENSEL",
+      "e": "✏️",
+      "cat": "sekolah"
+    },
+    {
+      "w": "PEMADAM",
+      "e": "🧽",
+      "cat": "sekolah"
+    },
+    {
+      "w": "BEKAL",
+      "e": "🎒",
+      "cat": "sekolah"
+    },
+    {
+      "w": "PEMBARIS",
+      "e": "📏",
+      "cat": "sekolah"
+    },
+    {
+      "w": "MEJA",
+      "e": "🪑",
+      "cat": "rumah"
+    },
+    {
+      "w": "KATIL",
+      "e": "🛏️",
+      "cat": "rumah"
+    },
+    {
+      "w": "LAMPU",
+      "e": "💡",
+      "cat": "rumah"
+    },
+    {
+      "w": "CERMIN",
+      "e": "🪞",
+      "cat": "rumah"
+    },
+    {
+      "w": "BAKUL",
+      "e": "🧺",
+      "cat": "rumah"
+    },
+    {
+      "w": "BOLA",
+      "e": "⚽",
+      "cat": "permainan"
+    },
+    {
+      "w": "PATUNG",
+      "e": "🧸",
+      "cat": "permainan"
+    },
+    {
+      "w": "LAYANG",
+      "e": "🪁",
+      "cat": "permainan"
+    },
+    {
+      "w": "OMBAK",
+      "e": "🌊",
+      "cat": "alam"
+    },
+    {
+      "w": "POKOK",
+      "e": "🌳",
+      "cat": "alam"
+    },
+    {
+      "w": "BUNGA",
+      "e": "🌸",
+      "cat": "alam"
+    },
+    {
+      "w": "AWAN",
+      "e": "☁️",
+      "cat": "alam"
+    },
+    {
+      "w": "MATAHARI",
+      "e": "☀️",
+      "cat": "alam"
+    },
+    {
+      "w": "BULAN",
+      "e": "🌙",
+      "cat": "alam"
+    },
+    {
+      "w": "BINTANG",
+      "e": "⭐",
+      "cat": "alam"
+    },
+    {
+      "w": "HUTAN",
+      "e": "🌲",
+      "cat": "alam"
+    },
+    {
+      "w": "EPAL",
+      "e": "🍎",
+      "cat": "makanan"
+    },
+    {
+      "w": "PISANG",
+      "e": "🍌",
+      "cat": "makanan"
+    },
+    {
+      "w": "NASI",
+      "e": "🍚",
+      "cat": "makanan"
+    },
+    {
+      "w": "ROTI",
+      "e": "🍞",
+      "cat": "makanan"
+    },
+    {
+      "w": "TELUR",
+      "e": "🥚",
+      "cat": "makanan"
+    },
+    {
+      "w": "SUSU",
+      "e": "🥛",
+      "cat": "makanan"
+    },
+    {
+      "w": "KEJU",
+      "e": "🧀",
+      "cat": "makanan"
+    },
+    {
+      "w": "BISKUT",
+      "e": "🍪",
+      "cat": "makanan"
+    },
+    {
+      "w": "OREN",
+      "e": "🍊",
+      "cat": "makanan"
+    },
+    {
+      "w": "KUCING",
+      "e": "🐱",
+      "cat": "haiwan"
+    },
+    {
+      "w": "AYAM",
+      "e": "🐔",
+      "cat": "haiwan"
+    },
+    {
+      "w": "IKAN",
+      "e": "🐟",
+      "cat": "haiwan"
+    },
+    {
+      "w": "GAJAH",
+      "e": "🐘",
+      "cat": "haiwan"
+    },
+    {
+      "w": "KERA",
+      "e": "🐵",
+      "cat": "haiwan"
+    },
+    {
+      "w": "KELINCI",
+      "e": "🐰",
+      "cat": "haiwan"
+    },
+    {
+      "w": "RAMA",
+      "e": "🦋",
+      "cat": "haiwan"
+    },
+    {
+      "w": "LEMBU",
+      "e": "🐄",
+      "cat": "haiwan"
+    },
+    {
+      "w": "KERETA",
+      "e": "🚗",
+      "cat": "pengangkutan"
+    },
+    {
+      "w": "BAS",
+      "e": "🚌",
+      "cat": "pengangkutan"
+    },
+    {
+      "w": "BOT",
+      "e": "⛵",
+      "cat": "pengangkutan"
+    },
+    {
+      "w": "KAPAL",
+      "e": "🚢",
+      "cat": "pengangkutan"
+    },
+    {
+      "w": "BASIKAL",
+      "e": "🚲",
+      "cat": "pengangkutan"
+    },
+    {
+      "w": "TOPI",
+      "e": "🎩",
+      "cat": "pakaian"
+    },
+    {
+      "w": "KASUT",
+      "e": "👟",
+      "cat": "pakaian"
+    },
+    {
+      "w": "BAJU",
+      "e": "👕",
+      "cat": "pakaian"
+    },
+    {
+      "w": "STOKIN",
+      "e": "🧦",
+      "cat": "pakaian"
+    },
+    {
+      "w": "PAYUNG",
+      "e": "☂️",
+      "cat": "objek"
+    },
+    {
+      "w": "BOTOL",
+      "e": "🍶",
+      "cat": "objek"
+    },
+    {
+      "w": "JAM",
+      "e": "⏰",
+      "cat": "objek"
+    },
+    {
+      "w": "SABUN",
+      "e": "🧼",
+      "cat": "objek"
+    },
+    {
+      "w": "SIKAT",
+      "e": "🪮",
+      "cat": "objek"
+    },
+    {
+      "w": "GUNTING",
+      "e": "✂️",
+      "cat": "objek"
+    },
+    {
+      "w": "LANGSIR",
+      "e": "🪟",
+      "cat": "rumah"
+    }
+  ],
+  "spell": [
+    {
+      "w": "BOLA",
+      "e": "⚽"
+    },
+    {
+      "w": "BUKU",
+      "e": "📚"
+    },
+    {
+      "w": "MEJA",
+      "e": "🪑"
+    },
+    {
+      "w": "ROTI",
+      "e": "🍞"
+    },
+    {
+      "w": "SUSU",
+      "e": "🥛"
+    },
+    {
+      "w": "TOPI",
+      "e": "🎩"
+    },
+    {
+      "w": "IKAN",
+      "e": "🐟"
+    },
+    {
+      "w": "JAM",
+      "e": "⏰"
+    },
+    {
+      "w": "EPAL",
+      "e": "🍎"
+    },
+    {
+      "w": "BUNGA",
+      "e": "🌸"
+    },
+    {
+      "w": "POKOK",
+      "e": "🌳"
+    },
+    {
+      "w": "KASUT",
+      "e": "👟"
+    },
+    {
+      "w": "PAYUNG",
+      "e": "☂️"
+    },
+    {
+      "w": "KELINCI",
+      "e": "🐰"
+    },
+    {
+      "w": "GELAS",
+      "e": "🥛"
+    },
+    {
+      "w": "MATA",
+      "e": "👁️"
+    },
+    {
+      "w": "KAPAL",
+      "e": "🚢"
+    },
+    {
+      "w": "KERAJAAN",
+      "e": "🏛️"
+    },
+    {
+      "w": "BENDERA",
+      "e": "🚩"
+    },
+    {
+      "w": "LEMBU",
+      "e": "🐄"
+    },
+    {
+      "w": "KUCING",
+      "e": "🐱"
+    },
+    {
+      "w": "BASIKAL",
+      "e": "🚲"
+    },
+    {
+      "w": "TELUR",
+      "e": "🥚"
+    },
+    {
+      "w": "SABUN",
+      "e": "🧼"
+    }
+  ],
+  "syllable": [
+    {
+      "w": "BUKU",
+      "s": 2
+    },
+    {
+      "w": "MEJA",
+      "s": 2
+    },
+    {
+      "w": "ROTI",
+      "s": 2
+    },
+    {
+      "w": "KUCING",
+      "s": 2
+    },
+    {
+      "w": "BOLA",
+      "s": 2
+    },
+    {
+      "w": "SABUN",
+      "s": 2
+    },
+    {
+      "w": "MATA",
+      "s": 2
+    },
+    {
+      "w": "GELAS",
+      "s": 2
+    },
+    {
+      "w": "TOPI",
+      "s": 2
+    },
+    {
+      "w": "GAJAH",
+      "s": 2
+    },
+    {
+      "w": "AYAM",
+      "s": 2
+    },
+    {
+      "w": "SUSU",
+      "s": 2
+    },
+    {
+      "w": "KERAJAAN",
+      "s": 3
+    },
+    {
+      "w": "BENDERA",
+      "s": 3
+    },
+    {
+      "w": "SEPATU",
+      "s": 3
+    },
+    {
+      "w": "BAJU",
+      "s": 2
+    },
+    {
+      "w": "TELEVISYEN",
+      "s": 4
+    },
+    {
+      "w": "MOTOSIKAL",
+      "s": 4
+    },
+    {
+      "w": "PERPUSTAKAAN",
+      "s": 4
+    },
+    {
+      "w": "BASIKAL",
+      "s": 3
+    },
+    {
+      "w": "KEMAHIRAN",
+      "s": 4
+    },
+    {
+      "w": "SEKOLAH",
+      "s": 3
+    },
+    {
+      "w": "SEMANGKA",
+      "s": 3
+    },
+    {
+      "w": "KIPAS",
+      "s": 2
+    }
+  ],
+  "categories": {
+    "haiwan": {
+      "label": "Haiwan",
+      "emoji": "🐾",
+      "items": [
+        "KUCING",
+        "AYAM",
+        "IKAN",
+        "GAJAH",
+        "KERA",
+        "KELINCI",
+        "LEMBU"
+      ]
+    },
+    "makanan": {
+      "label": "Makanan",
+      "emoji": "🍎",
+      "items": [
+        "NASI",
+        "ROTI",
+        "EPAL",
+        "SUSU",
+        "KEJU",
+        "PISANG",
+        "TELUR"
+      ]
+    },
+    "pengangkutan": {
+      "label": "Pengangkutan",
+      "emoji": "🚗",
+      "items": [
+        "KERETA",
+        "BOT",
+        "BAS",
+        "KAPAL",
+        "BASIKAL"
+      ]
+    },
+    "sekolah": {
+      "label": "Sekolah",
+      "emoji": "🎒",
+      "items": [
+        "BUKU",
+        "PENSEL",
+        "PEMADAM",
+        "PEMBARIS",
+        "BEKAL"
+      ]
+    },
+    "pakaian": {
+      "label": "Pakaian",
+      "emoji": "👕",
+      "items": [
+        "TOPI",
+        "KASUT",
+        "BAJU",
+        "STOKIN"
+      ]
+    },
+    "alam": {
+      "label": "Alam",
+      "emoji": "🌳",
+      "items": [
+        "POKOK",
+        "BUNGA",
+        "AWAN",
+        "MATAHARI",
+        "BULAN",
+        "BINTANG",
+        "HUTAN"
+      ]
+    }
+  }
+}

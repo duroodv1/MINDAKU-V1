@@ -1,0 +1,26 @@
+{
+  "shapes": [
+    { "id": "bulatan", "name": "Bulatan", "emoji": "⭕", "sides": 0, "vertices": 0, "dim": "2D", "note": "Bulatan mempunyai 0 sisi dan bentuknya bulat sempurna." },
+    { "id": "segitiga", "name": "Segi Tiga", "emoji": "🔺", "sides": 3, "vertices": 3, "dim": "2D", "note": "Segi tiga mempunyai 3 sisi dan 3 bucu." },
+    { "id": "segiempat", "name": "Segi Empat Sama", "emoji": "🟦", "sides": 4, "vertices": 4, "dim": "2D", "note": "Segi empat sama mempunyai 4 sisi yang sama panjang." },
+    { "id": "segitempat", "name": "Segi Empat Tepat", "emoji": "▭", "sides": 4, "vertices": 4, "dim": "2D", "note": "Segi empat tepat: dua pasang sisi berlawanan sama panjang." },
+    { "id": "pentagon", "name": "Pentagon", "emoji": "⬟", "sides": 5, "vertices": 5, "dim": "2D", "note": "Pentagon mempunyai 5 sisi dan 5 bucu." },
+    { "id": "heksagon", "name": "Heksagon", "emoji": "⬢", "sides": 6, "vertices": 6, "dim": "2D", "note": "Heksagon mempunyai 6 sisi dan 6 bucu." },
+    { "id": "segiempatwujud", "name": "Rombus", "emoji": "🔶", "sides": 4, "vertices": 4, "dim": "2D", "note": "Rombus ialah segi empat dengan sisi sama panjang, condong." }
+  ],
+  "solids": [
+    { "id": "kubus", "name": "Kubus", "emoji": "🧊", "faces": 6, "note": "Kubus mempunyai 6 permukaan segi empat sama." },
+    { "id": "sfera", "name": "Sfera", "emoji": "⚽", "faces": 1, "note": "Sfera bentuknya bulat sepenuhnya seperti bola." },
+    { "id": "silinder", "name": "Silinder", "emoji": "🥫", "faces": 3, "note": "Silinder mempunyai 2 permukaan bulat dan 1 lengkung." },
+    { "id": "kon", "name": "Kon", "emoji": "🍦", "faces": 2, "note": "Kon mempunyai 1 permukaan bulat dan 1 hujung tajam." },
+    { "id": "piramid", "name": "Piramid", "emoji": "🔺", "faces": 5, "note": "Piramid segi empat mempunyai 4 segi tiga dan 1 tapak." }
+  ],
+  "objects": [
+    { "name": "Rumah", "emoji": "🏠", "parts": ["segiempat", "segitiga"] },
+    { "name": "Pokok Krismas", "emoji": "🎄", "parts": ["segitiga", "segiempat"] },
+    { "name": "Bot", "emoji": "⛵", "parts": ["segitiga", "segiempat"] },
+    { "name": "Roket", "emoji": "🚀", "parts": ["segitiga", "segiempat", "bulatan"] },
+    { "name": "Kereta", "emoji": "🚗", "parts": ["segiempat", "bulatan"] },
+    { "name": "Lampu Jalan", "emoji": "💡", "parts": ["segiempat", "bulatan"] }
+  ]
+}

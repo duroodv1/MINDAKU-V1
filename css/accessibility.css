@@ -1,0 +1,80 @@
+/* ============================================================
+   MINDAKU V.1 — accessibility.css
+   Mod visual: Normal / Reduced Visual / High Readability
+   Animasi OFF, Reduced Motion, fokus, kontras
+   ============================================================ */
+
+/* ----- REDUCED VISUAL: kurangkan keteruhan, kekacangan ----- */
+body.vm-reduced{
+  --bg:#F6F4EE; --bg-soft:#EFEBE0;
+  --brand:#4A6B70; --brand-soft:#E9EEEA;
+  --accent:#C8C0B2; --accent-soft:#EFEBE0;
+  --star:#D9CB9A; --coin:#CDB67F;
+  --shadow:none; --shadow-lg:none;
+}
+body.vm-reduced .cicon,
+body.vm-reduced .choice .cem{font-size:1.8rem}
+body.vm-reduced .deco,
+body.vm-reduced .deco-header .deco{display:none !important}
+body.vm-reduced .card .cat-strip{height:4px}
+body.vm-reduced .mem-back{background:#7A8A88}
+body.vm-reduced .bcell.wall{background:#8A9795}
+
+/* ----- HIGH READABILITY: fon besar, kontras tinggi ----- */
+body.vm-readability{
+  --bg:#FFFFFF; --bg-soft:#F2F2F2; --card:#FFFFFF;
+  --ink:#1B1B1B; --ink-soft:#3D3D3D; --ink-faint:#5A5A5A;
+  --brand:#0F5C66; --brand-deep:#093E46; --brand-soft:#E2F1F2;
+  --line:#C9C9C9; --line-soft:#E5E5E5;
+  --shadow:none; --shadow-lg:0 4px 10px rgba(0,0,0,.18);
+  --font:Verdana,"Trebuchet MS",Tahoma,sans-serif;
+}
+body.vm-readability{font-size:1.06em;line-height:1.65;letter-spacing:.3px}
+body.vm-readability .prompt{font-size:1.35rem}
+body.vm-readability .instruction-bar .itext{font-size:1.1rem}
+body.vm-readability .choice{border-width:3px;font-size:1.1rem;min-height:100px}
+body.vm-readability .btn{font-size:1.1rem;border-width:3px}
+body.vm-readability .set-row .slabel,
+body.vm-readability .card .cname{font-size:1.08rem}
+body.vm-readability .card .cdesc,
+body.vm-reduced  .card .cdesc{font-size:.95rem;color:var(--ink-soft)}
+body.vm-readability .choice.dimmed{opacity:.15}
+body.vm-readability .otoken,
+body.vm-readability .mtile,
+body.vm-readability .stile{font-size:1.1rem;letter-spacing:.5px}
+body.vm-readability .feedback-line{font-size:1.2rem}
+body.vm-readability a,body.vm-readability .card .cdesc{text-decoration-thickness:2px}
+body.vm-readability .mem-back{background:#0F5C66}
+body.vm-readability .bcell.wall{background:#566}
+
+/* ----- ANIMASI OFF ----- */
+body.anim-off *{animation:none !important;transition:none !important}
+body.anim-off .overlay{background:rgba(51,65,63,.5)}
+
+/* ----- REDUCED MOTION ----- */
+body.rmotion *{
+  animation-duration:.001s !important;
+  animation-iteration-count:1 !important;
+  transition-duration:.05s !important;
+}
+body.rmotion{scroll-behavior:auto}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001s !important;animation-iteration-count:1 !important;transition-duration:.05s !important}
+}
+
+/* ----- Fokus & navigasi papan kekunci ----- */
+.btn:focus-visible,.choice:focus-visible,.pill:focus-visible,.level-btn:focus-visible,
+.mtile:focus-visible,.otoken:focus-visible,.stile:focus-visible,.bin:focus-visible,
+.mem-card:focus-visible,.dbtn:focus-visible,.switch:focus-visible,.seg button:focus-visible{
+  outline:4px solid #E2A93B;outline-offset:2px;
+}
+
+/* Henti berkelip untuk sesiapa yang sensitif */
+*{animation-iteration-count:inherit}
+.blink,.flashing{animation-iteration-count:1 !important}
+
+/* Teks arahan tidak terpotong pada skrin kecil */
+.instruction-bar .itext{-webkit-hyphens:auto;hyphens:auto}
+
+/* Sasaran sentuh minimum dikuatkuasakan untuk kawalan utama */
+.bin,.dbtn{min-width:52px}

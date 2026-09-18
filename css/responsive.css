@@ -1,0 +1,67 @@
+/* ============================================================
+   MINDAKU V.1 — responsive.css
+   360px → desktop, portrait & landscape, touch-friendly
+   ============================================================ */
+
+/* Telefon kecil (360px) */
+@media (max-width:379px){
+  html{font-size:15px}
+  .menu-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .menu-tile{min-height:92px;padding:10px 8px}
+  .choices{grid-template-columns:1fr 1fr;gap:10px}
+  .level-grid{gap:8px}
+  .task-mount{padding:12px}
+  .dpad{grid-template-columns:repeat(3,56px);grid-template-rows:repeat(3,52px)}
+  .mascot-wrap{width:120px}
+}
+
+/* Telefon biasa (390–430px) */
+@media (min-width:380px) and (max-width:520px){
+  .choices{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
+}
+
+/* Tablet & atas */
+@media (min-width:600px){
+  .menu-grid{grid-template-columns:repeat(3,1fr)}
+  .cards-grid{grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}
+  .task-mount{padding:22px}
+  .choices{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+  .dpad{grid-template-columns:repeat(3,68px);grid-template-rows:repeat(3,62px)}
+}
+
+/* Desktop */
+@media (min-width:900px){
+  #app{padding-bottom:40px}
+  .menu-grid{grid-template-columns:repeat(3,1fr)}
+  .menu-tile:hover{transform:translateY(-2px)}
+  .card:hover{transform:translateY(-2px)}
+  .btn:hover{box-shadow:var(--shadow-lg)}
+  .choice:hover{border-color:var(--brand)}
+}
+
+/* Landscape telefon: kurangkan tinggi hero */
+@media (max-height:520px) and (orientation:landscape){
+  .home-hero{flex-direction:row;justify-content:center;gap:18px}
+  .mascot-wrap{width:84px;margin:0}
+  .menu-grid{grid-template-columns:repeat(3,1fr)}
+  .level-grid{grid-template-columns:repeat(10,1fr)}
+  .dpad{grid-template-columns:repeat(3,52px);grid-template-rows:repeat(3,46px)}
+  .topbar{min-height:52px}
+}
+
+/* Sentuh: sasaran sentuh besar */
+@media (pointer:coarse){
+  .choice,.mtile,.otoken,.stile{min-height:60px}
+  .btn{min-height:60px}
+}
+
+/* Selamatkan ruang bar sistem */
+@supports (height:100dvh){
+  #app{min-height:100dvh}
+}
+
+/* Dicetak / penyemak imus lama */
+@supports not (aspect-ratio:1){
+  .mem-card{height:90px}
+  .level-btn{height:56px}
+}
