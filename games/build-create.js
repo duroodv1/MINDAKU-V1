@@ -112,6 +112,7 @@
 
       function pos(cx, cy) {
         var r = svg.getBoundingClientRect();
+        if (!r || !r.width || !r.height) return { x: 240, y: 200 }; /* papan belum bersaiz — guna tengah */
         return { x: (cx - r.left) * (480 / r.width), y: (cy - r.top) * (400 / r.height) };
       }
       function snap(v) { return Math.round(v / 12) * 12; }
@@ -161,9 +162,10 @@
       if (window.PointerEvent) {
         svg.addEventListener("pointerdown", function (e) {
           ptrOK = true;
-          down(e.clientX, e.clientY, e.target, function () { svg.setPointerCapture(e.pointerId); });
+          var c = MK.evtXY(e);
+          if (c) down(c.x, c.y, e.target, function () { svg.setPointerCapture(e.pointerId); });
         });
-        svg.addEventListener("pointermove", function (e) { move(e.clientX, e.clientY); });
+        svg.addEventListener("pointermove", function (e) { var c = MK.evtXY(e); if (c) move(c.x, c.y); });
         svg.addEventListener("pointerup", up);
         svg.addEventListener("pointercancel", up);
       }
@@ -171,22 +173,23 @@
         if (ptrOK) return;
         e.preventDefault();
         lastTouch = Date.now();
-        var t = e.changedTouches[0];
-        down(t.clientX, t.clientY, e.target, null);
+        var c = MK.evtXY(e);
+        if (c) down(c.x, c.y, e.target, null);
       }, { passive: false });
       svg.addEventListener("touchmove", function (e) {
         if (ptrOK || !dragTarget) return;
         e.preventDefault();
-        var t = e.changedTouches[0];
-        move(t.clientX, t.clientY);
+        var c = MK.evtXY(e);
+        if (c) move(c.x, c.y);
       }, { passive: false });
       svg.addEventListener("touchend", function (e) { if (ptrOK) return; e.preventDefault(); up(); }, { passive: false });
       svg.addEventListener("touchcancel", function () { if (!ptrOK) up(); });
       svg.addEventListener("mousedown", function (e) {
         if (ptrOK || Date.now() - lastTouch < 600) return;
-        down(e.clientX, e.clientY, e.target, null);
+        var c = MK.evtXY(e);
+        if (c) down(c.x, c.y, e.target, null);
       });
-      document.addEventListener("mousemove", function (e) { if (!ptrOK && dragTarget && svg.isConnected) move(e.clientX, e.clientY); });
+      document.addEventListener("mousemove", function (e) { var c = MK.evtXY(e); if (!ptrOK && dragTarget && svg.isConnected && c) move(c.x, c.y); });
       document.addEventListener("mouseup", function () { if (!ptrOK && dragTarget && svg.isConnected) up(); });
 
       /* alat */

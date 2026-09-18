@@ -165,31 +165,33 @@
         else move(0, dy > 0 ? 1 : -1);
       }
       if (window.PointerEvent) {
-        wrap.addEventListener("pointerdown", function (e) { ptrOK = true; sx = e.clientX; sy = e.clientY; });
-        wrap.addEventListener("pointerup", function (e) { swipeEnd(e.clientX, e.clientY); });
+        wrap.addEventListener("pointerdown", function (e) { ptrOK = true; var c = MK.evtXY(e); if (c) { sx = c.x; sy = c.y; } });
+        wrap.addEventListener("pointerup", function (e) { var c = MK.evtXY(e); if (c) swipeEnd(c.x, c.y); });
         wrap.addEventListener("pointercancel", function () { sx = sy = null; });
       }
       wrap.addEventListener("touchstart", function (e) {
         if (ptrOK) return;
         e.preventDefault();
         lastTouch = Date.now();
-        var t = e.changedTouches[0];
-        sx = t.clientX; sy = t.clientY;
+        var c = MK.evtXY(e);
+        if (c) { sx = c.x; sy = c.y; }
       }, { passive: false });
       wrap.addEventListener("touchend", function (e) {
         if (ptrOK) return;
         e.preventDefault();
-        var t = e.changedTouches[0];
-        swipeEnd(t.clientX, t.clientY);
+        var c = MK.evtXY(e);
+        if (c) swipeEnd(c.x, c.y);
       }, { passive: false });
       wrap.addEventListener("touchcancel", function () { if (!ptrOK) { sx = sy = null; } });
       wrap.addEventListener("mousedown", function (e) {
         if (ptrOK || Date.now() - lastTouch < 600) return;
-        sx = e.clientX; sy = e.clientY;
+        var c = MK.evtXY(e);
+        if (c) { sx = c.x; sy = c.y; }
       });
       wrap.addEventListener("mouseup", function (e) {
         if (ptrOK || Date.now() - lastTouch < 600 || sx == null) return;
-        swipeEnd(e.clientX, e.clientY);
+        var c = MK.evtXY(e);
+        if (c) swipeEnd(c.x, c.y);
       });
 
       api.hint(function () {

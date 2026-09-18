@@ -87,6 +87,7 @@
       }
       function pos(cx, cy) {
         var r = canvas.getBoundingClientRect();
+        if (!r || !r.width || !r.height) return { x: SIZE / 2, y: SIZE / 2 };
         return { x: (cx - r.left) * (SIZE / r.width), y: (cy - r.top) * (SIZE / r.height) };
       }
       /* Lapisan input sejagat: Pointer → Sentuhan → Tetikus */
@@ -109,9 +110,10 @@
           e.preventDefault();
           ptrOK = true;
           try { canvas.setPointerCapture(e.pointerId); } catch (err) { }
-          strokeStart(e.clientX, e.clientY);
+          var c = MK.evtXY(e);
+          if (c) strokeStart(c.x, c.y);
         });
-        canvas.addEventListener("pointermove", function (e) { strokeDraw(e.clientX, e.clientY); });
+        canvas.addEventListener("pointermove", function (e) { var c = MK.evtXY(e); if (c) strokeDraw(c.x, c.y); });
         canvas.addEventListener("pointerup", stop);
         canvas.addEventListener("pointercancel", stop);
       }
@@ -119,22 +121,23 @@
         if (ptrOK) return;
         e.preventDefault();
         lastTouch = Date.now();
-        var t = e.changedTouches[0];
-        strokeStart(t.clientX, t.clientY);
+        var c = MK.evtXY(e);
+        if (c) strokeStart(c.x, c.y);
       }, { passive: false });
       canvas.addEventListener("touchmove", function (e) {
         if (ptrOK || !state.drawing) return;
         e.preventDefault();
-        var t = e.changedTouches[0];
-        strokeDraw(t.clientX, t.clientY);
+        var c = MK.evtXY(e);
+        if (c) strokeDraw(c.x, c.y);
       }, { passive: false });
       canvas.addEventListener("touchend", function (e) { if (ptrOK) return; e.preventDefault(); stop(); }, { passive: false });
       canvas.addEventListener("touchcancel", function () { if (!ptrOK) stop(); });
       canvas.addEventListener("mousedown", function (e) {
         if (ptrOK || Date.now() - lastTouch < 600) return;
-        strokeStart(e.clientX, e.clientY);
+        var c = MK.evtXY(e);
+        if (c) strokeStart(c.x, c.y);
       });
-      document.addEventListener("mousemove", function (e) { if (!ptrOK && state.drawing && canvas.isConnected) strokeDraw(e.clientX, e.clientY); });
+      document.addEventListener("mousemove", function (e) { var c = MK.evtXY(e); if (!ptrOK && state.drawing && canvas.isConnected && c) strokeDraw(c.x, c.y); });
       document.addEventListener("mouseup", function () { if (!ptrOK && state.drawing && canvas.isConnected) stop(); });
 
       /* Baris alat: mod */

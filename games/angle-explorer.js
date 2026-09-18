@@ -135,7 +135,7 @@
               ptrOK = true; dragging = true;
               try { handle.setPointerCapture(e.pointerId); } catch (err) { }
             });
-            handle.addEventListener("pointermove", function (e) { if (dragging) upd(e.clientX, e.clientY); });
+            handle.addEventListener("pointermove", function (e) { if (!dragging) return; var c = MK.evtXY(e); if (c) upd(c.x, c.y); });
             handle.addEventListener("pointerup", dragStop);
             handle.addEventListener("pointercancel", dragStop);
           }
@@ -148,15 +148,15 @@
           document.addEventListener("touchmove", function (e) {
             if (ptrOK || !dragging || !svg3.isConnected) return;
             e.preventDefault();
-            var t = e.changedTouches[0];
-            upd(t.clientX, t.clientY);
+            var c = MK.evtXY(e);
+            if (c) upd(c.x, c.y);
           }, { passive: false });
           document.addEventListener("touchend", function () { if (!ptrOK && dragging && svg3.isConnected) dragStop(); });
           handle.addEventListener("mousedown", function (e) {
             if (ptrOK || Date.now() - lastTouch < 600) return;
             dragging = true;
           });
-          document.addEventListener("mousemove", function (e) { if (!ptrOK && dragging && svg3.isConnected) upd(e.clientX, e.clientY); });
+          document.addEventListener("mousemove", function (e) { if (!ptrOK && dragging && svg3.isConnected) { var c = MK.evtXY(e); if (c) upd(c.x, c.y); } });
           document.addEventListener("mouseup", function () { if (!ptrOK && dragging && svg3.isConnected) dragStop(); });
           var rotRow = MK.el("div", "tool-row");
           var bl = MK.el("button", "tool-btn", "◀ 15°");

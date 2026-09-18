@@ -4,7 +4,7 @@
    ============================================================ */
 "use strict";
 window.MK = window.MK || {};
-MK.VERSION = "1.2.2";
+MK.VERSION = "1.2.3";
 MK.APP_NAME = "MINDAKU V.1";
 
 /* ---------- Utiliti DOM ---------- */
@@ -24,6 +24,24 @@ MK.h = function (html) {
   var t = document.createElement("template");
   t.innerHTML = html.trim();
   return t.content.firstElementChild;
+};
+
+/* ---------- Koordinat sejagat acara (pointer/sentuh/tetikus) ----------
+   Sesetengah pelayar lama memberi acara tanpa clientX/clientY yang sah.
+   Kembalikan {x,y} daripada sumber yang ada, atau null jika tiada. */
+MK.evtXY = function (e) {
+  function num(v) { return typeof v === "number" && isFinite(v); }
+  var x = null, y = null;
+  if (num(e.clientX) && num(e.clientY)) { x = e.clientX; y = e.clientY; }
+  else {
+    var t = (e.changedTouches && e.changedTouches[0]) || (e.touches && e.touches[0]) || null;
+    if (t && num(t.clientX) && num(t.clientY)) { x = t.clientX; y = t.clientY; }
+    else if (num(e.pageX) && num(e.pageY)) {
+      var sx = window.scrollX || window.pageXOffset || 0, sy = window.scrollY || window.pageYOffset || 0;
+      x = e.pageX - sx; y = e.pageY - sy;
+    }
+  }
+  return x == null ? null : { x: x, y: y };
 };
 
 /* ---------- Toast (maklum balas ringan) ---------- */
