@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+  <title>MINDAKU V.1 — Belajar • Bermain • Berkembang</title>
+  <meta name="description" content="MINDAKU V.1 — 50 permainan interaktif pendidikan untuk kanak-kanak 8–12 tahun. Offline-first PWA.">
+  <meta name="theme-color" content="#3E7C82">
+  <link rel="manifest" href="pwa/manifest.json">
+  <link rel="icon" type="image/png" href="icons/favicon.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="MINDAKU">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/accessibility.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <div id="app">
+    <main id="screen" aria-live="off">
+      <div class="screen" style="text-align:center;padding:60px 20px">
+        <div style="font-size:2.4rem">🦉</div>
+        <h1 style="color:var(--brand-deep);margin:10px 0">MINDAKU V.1</h1>
+        <p style="color:var(--ink-soft)">Memuatkan dunia permainan…</p>
+      </div>
+    </main>
+  </div>
+  <div id="toast-root" aria-live="polite"></div>
+  <div id="aria-live" class="sr-only" aria-live="polite"></div>
+
+  <!-- Teras -->
+  <script src="js/app.js" defer></script>
+  <script src="js/storage.js" defer></script>
+  <script src="js/settings.js" defer></script>
+  <script src="js/accessibility.js" defer></script>
+  <script src="js/audio.js" defer></script>
+  <script src="js/tts.js" defer></script>
+  <script src="js/profile.js" defer></script>
+  <script src="js/rewards.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/content-generator.js" defer></script>
+  <script src="js/game-engine.js" defer></script>
+
+  <!-- 50 Permainan -->
+  <script src="games/geometry-builder.js" defer></script>
+  <script src="games/tangram-challenge.js" defer></script>
+  <script src="games/shape-construction.js" defer></script>
+  <script src="games/symmetry-mirror.js" defer></script>
+  <script src="games/angle-explorer.js" defer></script>
+
+  <script src="games/sound-sorter.js" defer></script>
+  <script src="games/same-different.js" defer></script>
+  <script src="games/pitch-detective.js" defer></script>
+  <script src="games/syllable-frog.js" defer></script>
+  <script src="games/listen-spell.js" defer></script>
+
+  <script src="games/picnic-memory.js" defer></script>
+  <script src="games/recipe-memory.js" defer></script>
+  <script src="games/memory-match.js" defer></script>
+  <script src="games/what-changed.js" defer></script>
+  <script src="games/shopping-memory.js" defer></script>
+
+  <script src="games/word-picture-match.js" defer></script>
+  <script src="games/category-words.js" defer></script>
+  <script src="games/sentence-train.js" defer></script>
+  <script src="games/word-builder.js" defer></script>
+  <script src="games/word-analogy.js" defer></script>
+
+  <script src="games/garden-counting.js" defer></script>
+  <script src="games/math-garden.js" defer></script>
+  <script src="games/multiplication-garden.js" defer></script>
+  <script src="games/fair-share.js" defer></script>
+  <script src="games/number-crane.js" defer></script>
+
+  <script src="games/star-maze.js" defer></script>
+  <script src="games/odd-one-out.js" defer></script>
+  <script src="games/pattern-master.js" defer></script>
+  <script src="games/pattern-city.js" defer></script>
+  <script src="games/logic-puzzle.js" defer></script>
+
+  <script src="games/animal-habitat.js" defer></script>
+  <script src="games/solar-mission.js" defer></script>
+  <script src="games/color-lab.js" defer></script>
+  <script src="games/plant-detective.js" defer></script>
+  <script src="games/weather-explorer.js" defer></script>
+
+  <script src="games/daily-routine.js" defer></script>
+  <script src="games/smart-diner.js" defer></script>
+  <script src="games/smart-shopping.js" defer></script>
+  <script src="games/organize-room.js" defer></script>
+  <script src="games/pack-school-bag.js" defer></script>
+
+  <script src="games/personal-space.js" defer></script>
+  <script src="games/ask-first.js" defer></script>
+  <script src="games/safe-unsafe.js" defer></script>
+  <script src="games/road-safety.js" defer></script>
+  <script src="games/what-should-i-do.js" defer></script>
+
+  <script src="games/kaleidoscope-paint.js" defer></script>
+  <script src="games/color-by-number.js" defer></script>
+  <script src="games/typing-garden.js" defer></script>
+  <script src="games/object-hunt.js" defer></script>
+  <script src="games/build-create.js" defer></script>
+
+  <!-- Diagnostik -->
+  <script src="js/selftest.js" defer></script>
+</body>
+</html>
