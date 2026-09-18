@@ -154,18 +154,43 @@
       document.addEventListener("keydown", kh);
       api.onCleanup(function () { document.removeEventListener("keydown", kh); });
 
-      /* swipe */
-      var sx = null, sy = null;
-      wrap.addEventListener("pointerdown", function (e) { sx = e.clientX; sy = e.clientY; });
-      wrap.addEventListener("pointerup", function (e) {
+      /* swipe — lapisan input sejagat: Pointer → Sentuhan → Tetikus */
+      var sx = null, sy = null, ptrOK = false, lastTouch = 0;
+      function swipeEnd(cx, cy) {
         if (sx == null) return;
-        var dx = e.clientX - sx, dy = e.clientY - sy;
+        var dx = cx - sx, dy = cy - sy;
         sx = sy = null;
         if (Math.abs(dx) < 18 && Math.abs(dy) < 18) return;
         if (Math.abs(dx) > Math.abs(dy)) move(dx > 0 ? 1 : -1, 0);
         else move(0, dy > 0 ? 1 : -1);
+      }
+      if (window.PointerEvent) {
+        wrap.addEventListener("pointerdown", function (e) { ptrOK = true; sx = e.clientX; sy = e.clientY; });
+        wrap.addEventListener("pointerup", function (e) { swipeEnd(e.clientX, e.clientY); });
+        wrap.addEventListener("pointercancel", function () { sx = sy = null; });
+      }
+      wrap.addEventListener("touchstart", function (e) {
+        if (ptrOK) return;
+        e.preventDefault();
+        lastTouch = Date.now();
+        var t = e.changedTouches[0];
+        sx = t.clientX; sy = t.clientY;
+      }, { passive: false });
+      wrap.addEventListener("touchend", function (e) {
+        if (ptrOK) return;
+        e.preventDefault();
+        var t = e.changedTouches[0];
+        swipeEnd(t.clientX, t.clientY);
+      }, { passive: false });
+      wrap.addEventListener("touchcancel", function () { if (!ptrOK) { sx = sy = null; } });
+      wrap.addEventListener("mousedown", function (e) {
+        if (ptrOK || Date.now() - lastTouch < 600) return;
+        sx = e.clientX; sy = e.clientY;
       });
-      wrap.addEventListener("pointercancel", function () { sx = sy = null; });
+      wrap.addEventListener("mouseup", function (e) {
+        if (ptrOK || Date.now() - lastTouch < 600 || sx == null) return;
+        swipeEnd(e.clientX, e.clientY);
+      });
 
       api.hint(function () {
         // tunjuk laluan ringkas: BFS dari pemain ke matlamat

@@ -115,24 +115,49 @@
           var cur = 60;
           setArm(svg3, cur, true);
           mount.appendChild(MK.el("div", "sub-prompt", "Buat sudut kira-kira <b>" + target + "°</b> (dalam ±" + tol + "°)"));
-          /* seret pemegang */
-          var dragging = false;
+          /* seret pemegang — lapisan input sejagat: Pointer → Sentuhan → Tetikus */
+          var dragging = false, ptrOK = false, lastTouch = 0;
           var handle = svg3.querySelector("#angle-handle");
-          function upd(ev) {
+          function upd(cx, cy) {
             var rect = svg3.getBoundingClientRect();
             var scale = 300 / rect.width;
-            var x = (ev.clientX - rect.left) * scale - 150;
-            var y = (ev.clientY - rect.top) * (250 / rect.height) * scale - 170;
+            var x = (cx - rect.left) * scale - 150;
+            var y = (cy - rect.top) * (250 / rect.height) * scale - 170;
             var ang = Math.atan2(-y, x) * 180 / Math.PI;
             if (ang < 0) ang += 360;
             if (ang > 180) ang = 180;
             cur = Math.max(5, Math.min(175, ang));
             setArm(svg3, cur, true);
           }
-          handle.addEventListener("pointerdown", function (e) { dragging = true; handle.setPointerCapture(e.pointerId); });
-          handle.addEventListener("pointermove", function (e) { if (dragging) upd(e); });
-          handle.addEventListener("pointerup", function () { dragging = false; });
-          handle.addEventListener("pointercancel", function () { dragging = false; });
+          function dragStop() { dragging = false; }
+          if (window.PointerEvent) {
+            handle.addEventListener("pointerdown", function (e) {
+              ptrOK = true; dragging = true;
+              try { handle.setPointerCapture(e.pointerId); } catch (err) { }
+            });
+            handle.addEventListener("pointermove", function (e) { if (dragging) upd(e.clientX, e.clientY); });
+            handle.addEventListener("pointerup", dragStop);
+            handle.addEventListener("pointercancel", dragStop);
+          }
+          handle.addEventListener("touchstart", function (e) {
+            if (ptrOK) return;
+            e.preventDefault();
+            lastTouch = Date.now();
+            dragging = true;
+          }, { passive: false });
+          document.addEventListener("touchmove", function (e) {
+            if (ptrOK || !dragging || !svg3.isConnected) return;
+            e.preventDefault();
+            var t = e.changedTouches[0];
+            upd(t.clientX, t.clientY);
+          }, { passive: false });
+          document.addEventListener("touchend", function () { if (!ptrOK && dragging && svg3.isConnected) dragStop(); });
+          handle.addEventListener("mousedown", function (e) {
+            if (ptrOK || Date.now() - lastTouch < 600) return;
+            dragging = true;
+          });
+          document.addEventListener("mousemove", function (e) { if (!ptrOK && dragging && svg3.isConnected) upd(e.clientX, e.clientY); });
+          document.addEventListener("mouseup", function () { if (!ptrOK && dragging && svg3.isConnected) dragStop(); });
           var rotRow = MK.el("div", "tool-row");
           var bl = MK.el("button", "tool-btn", "◀ 15°");
           var br = MK.el("button", "tool-btn", "15° ▶");

@@ -85,27 +85,57 @@
           ctx.restore();
         }
       }
-      function pos(e) {
+      function pos(cx, cy) {
         var r = canvas.getBoundingClientRect();
-        return { x: (e.clientX - r.left) * (SIZE / r.width), y: (e.clientY - r.top) * (SIZE / r.height) };
+        return { x: (cx - r.left) * (SIZE / r.width), y: (cy - r.top) * (SIZE / r.height) };
       }
-      canvas.addEventListener("pointerdown", function (e) {
-        e.preventDefault();
-        canvas.setPointerCapture(e.pointerId);
+      /* Lapisan input sejagat: Pointer → Sentuhan → Tetikus */
+      var ptrOK = false, lastTouch = 0;
+      function strokeStart(cx, cy) {
         snapshot();
         state.drawing = true;
-        state.last = pos(e);
+        state.last = pos(cx, cy);
         drawSeg(state.last.x, state.last.y, state.last.x + 0.01, state.last.y);
-      });
-      canvas.addEventListener("pointermove", function (e) {
+      }
+      function strokeDraw(cx, cy) {
         if (!state.drawing) return;
-        var p = pos(e);
+        var p = pos(cx, cy);
         drawSeg(state.last.x, state.last.y, p.x, p.y);
         state.last = p;
-      });
+      }
       function stop() { state.drawing = false; }
-      canvas.addEventListener("pointerup", stop);
-      canvas.addEventListener("pointercancel", stop);
+      if (window.PointerEvent) {
+        canvas.addEventListener("pointerdown", function (e) {
+          e.preventDefault();
+          ptrOK = true;
+          try { canvas.setPointerCapture(e.pointerId); } catch (err) { }
+          strokeStart(e.clientX, e.clientY);
+        });
+        canvas.addEventListener("pointermove", function (e) { strokeDraw(e.clientX, e.clientY); });
+        canvas.addEventListener("pointerup", stop);
+        canvas.addEventListener("pointercancel", stop);
+      }
+      canvas.addEventListener("touchstart", function (e) {
+        if (ptrOK) return;
+        e.preventDefault();
+        lastTouch = Date.now();
+        var t = e.changedTouches[0];
+        strokeStart(t.clientX, t.clientY);
+      }, { passive: false });
+      canvas.addEventListener("touchmove", function (e) {
+        if (ptrOK || !state.drawing) return;
+        e.preventDefault();
+        var t = e.changedTouches[0];
+        strokeDraw(t.clientX, t.clientY);
+      }, { passive: false });
+      canvas.addEventListener("touchend", function (e) { if (ptrOK) return; e.preventDefault(); stop(); }, { passive: false });
+      canvas.addEventListener("touchcancel", function () { if (!ptrOK) stop(); });
+      canvas.addEventListener("mousedown", function (e) {
+        if (ptrOK || Date.now() - lastTouch < 600) return;
+        strokeStart(e.clientX, e.clientY);
+      });
+      document.addEventListener("mousemove", function (e) { if (!ptrOK && state.drawing && canvas.isConnected) strokeDraw(e.clientX, e.clientY); });
+      document.addEventListener("mouseup", function () { if (!ptrOK && state.drawing && canvas.isConnected) stop(); });
 
       /* Baris alat: mod */
       var modeRow = MK.el("div", "tool-row");

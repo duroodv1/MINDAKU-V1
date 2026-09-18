@@ -110,54 +110,84 @@
         return g;
       }
 
-      function pos(e) {
+      function pos(cx, cy) {
         var r = svg.getBoundingClientRect();
-        return { x: (e.clientX - r.left) * (480 / r.width), y: (e.clientY - r.top) * (400 / r.height) };
+        return { x: (cx - r.left) * (480 / r.width), y: (cy - r.top) * (400 / r.height) };
       }
       function snap(v) { return Math.round(v / 12) * 12; }
 
-      var dragTarget = null, dragOff = { x: 0, y: 0 }, moved = false;
+      var dragTarget = null, dragOff = { x: 0, y: 0 }, moved = false, ptrOK = false, lastTouch = 0;
 
-      svg.addEventListener("pointerdown", function (e) {
-        var p = pos(e);
-        var g = e.target.closest("g");
-        if (g && g !== gridG && g.dataset.placed) {
-          // seret item sedia ada
-          dragTarget = g;
-          dragOff.x = parseFloat(g.dataset.x) - p.x;
-          dragOff.y = parseFloat(g.dataset.y) - p.y;
+      /* ---------- Lapisan input sejagat ----------
+         1) Pointer Events — pelayar baharu (Chrome, Edge, Safari 13+)
+         2) Sentuhan (touch) — pelayar lama tanpa Pointer Events
+         3) Tetikus (mouse) — pelayar desktop lama
+         Hanya satu lapisan aktif pada satu masa (ptrOK). */
+      function down(cx, cy, target, capture) {
+        var p = pos(cx, cy);
+        var hit = target && target.closest ? target.closest("g") : null;
+        if (hit && hit !== gridG && hit.dataset.placed) {
+          /* seret item sedia ada */
+          dragTarget = hit;
+          dragOff.x = parseFloat(hit.dataset.x) - p.x;
+          dragOff.y = parseFloat(hit.dataset.y) - p.y;
           moved = false;
-          svg.setPointerCapture(e.pointerId);
+          if (capture) { try { capture(); } catch (err) { } }
         } else {
-          // letak bentuk baharu
+          /* letak bentuk baharu */
           var x = snap(p.x), y = snap(p.y);
           var el = shapeEl(state.shape, state.color, x, y);
           el.dataset.placed = "1";
           el.dataset.x = x; el.dataset.y = y;
           el.classList.add("drop-in");
-          el.addEventListener("pointerdown", itemPointerDown);
           svg.appendChild(el);
           placed.push(el);
           api.sfx("place");
         }
-      });
-      function itemPointerDown(e) {
-        /* tidak digunakan — seret dikendalikan pada svg */
       }
-      svg.addEventListener("pointermove", function (e) {
+      function move(cx, cy) {
         if (!dragTarget) return;
-        var p = pos(e);
+        var p = pos(cx, cy);
         var x = snap(p.x + dragOff.x), y = snap(p.y + dragOff.y);
         dragTarget.dataset.x = x; dragTarget.dataset.y = y;
         dragTarget.setAttribute("transform", "translate(" + x + "," + y + ")");
         moved = true;
-      });
-      svg.addEventListener("pointerup", function () {
+      }
+      function up() {
         if (dragTarget && moved) api.sfx("tap");
         dragTarget = null;
+      }
+
+      if (window.PointerEvent) {
+        svg.addEventListener("pointerdown", function (e) {
+          ptrOK = true;
+          down(e.clientX, e.clientY, e.target, function () { svg.setPointerCapture(e.pointerId); });
+        });
+        svg.addEventListener("pointermove", function (e) { move(e.clientX, e.clientY); });
+        svg.addEventListener("pointerup", up);
+        svg.addEventListener("pointercancel", up);
+      }
+      svg.addEventListener("touchstart", function (e) {
+        if (ptrOK) return;
+        e.preventDefault();
+        lastTouch = Date.now();
+        var t = e.changedTouches[0];
+        down(t.clientX, t.clientY, e.target, null);
+      }, { passive: false });
+      svg.addEventListener("touchmove", function (e) {
+        if (ptrOK || !dragTarget) return;
+        e.preventDefault();
+        var t = e.changedTouches[0];
+        move(t.clientX, t.clientY);
+      }, { passive: false });
+      svg.addEventListener("touchend", function (e) { if (ptrOK) return; e.preventDefault(); up(); }, { passive: false });
+      svg.addEventListener("touchcancel", function () { if (!ptrOK) up(); });
+      svg.addEventListener("mousedown", function (e) {
+        if (ptrOK || Date.now() - lastTouch < 600) return;
+        down(e.clientX, e.clientY, e.target, null);
       });
-      /* Android: sentuhan kadang-kadang dibatalkan sistem (scroll) — pastikan seret berhenti bersih */
-      svg.addEventListener("pointercancel", function () { dragTarget = null; });
+      document.addEventListener("mousemove", function (e) { if (!ptrOK && dragTarget && svg.isConnected) move(e.clientX, e.clientY); });
+      document.addEventListener("mouseup", function () { if (!ptrOK && dragTarget && svg.isConnected) up(); });
 
       /* alat */
       var shapeRow = MK.el("div", "tool-row");
