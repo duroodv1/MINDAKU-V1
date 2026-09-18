@@ -3,7 +3,7 @@
    MINDAKU V.1 — service-worker.js (Offline-First)
    Cache-first untuk shell aplikasi + data + assets.
    ============================================================ */
-var CACHE = "mindaku-v1.0.2";
+var CACHE = "mindaku-v1.2.1";
 var PRECACHE = [
   "css/accessibility.css",
   "css/animations.css",

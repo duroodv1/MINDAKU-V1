@@ -165,6 +165,7 @@
         if (Math.abs(dx) > Math.abs(dy)) move(dx > 0 ? 1 : -1, 0);
         else move(0, dy > 0 ? 1 : -1);
       });
+      wrap.addEventListener("pointercancel", function () { sx = sy = null; });
 
       api.hint(function () {
         // tunjuk laluan ringkas: BFS dari pemain ke matlamat

@@ -70,7 +70,7 @@ img,svg{max-width:100%;display:block}
 
 /* ---------- Home ---------- */
 .home-hero{display:flex;flex-direction:column;align-items:center;padding:10px 0 4px}
-.app-logo{font-size:clamp(2.1rem,8vw,3rem);font-weight:900;letter-spacing:2px;color:var(--brand-deep)}
+.app-logo{font-size:2.6rem;font-size:clamp(2.1rem,8vw,3rem);font-weight:900;letter-spacing:2px;color:var(--brand-deep)}
 .app-logo .accentdot{color:var(--accent)}
 .tagline{color:var(--ink-soft);font-weight:700;font-size:.98rem;margin-top:2px}
 .subtag{color:var(--ink-faint);font-size:.85rem;margin-top:2px}

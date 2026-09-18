@@ -5,7 +5,7 @@
 "use strict";
 (function () {
   function plantSVG() {
-    return '<svg viewBox="0 0 220 260" style="width:min(300px,80vw);height:auto;margin:0 auto;display:block" aria-hidden="true">' +
+    return '<svg viewBox="0 0 220 260" style="width:300px;width:min(300px,80vw);height:auto;margin:0 auto;display:block" aria-hidden="true">' +
       '<ellipse cx="110" cy="240" rx="80" ry="14" fill="#E8DFC8"/>' +
       // buah
       '<g id="p-buah" style="cursor:pointer"><circle cx="150" cy="96" r="20" fill="#E05252" stroke="#fff" stroke-width="3"/><path d="M150 76 q3 -8 8 -10" stroke="#5FA97C" stroke-width="3" fill="none"/></g>' +

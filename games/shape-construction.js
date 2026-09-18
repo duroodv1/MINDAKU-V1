@@ -62,7 +62,7 @@
         stage.style.cssText = "background:#FDFBF5;border-radius:16px;padding:6px;min-height:220px;display:flex;align-items:center;justify-content:center";
         var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         svg.setAttribute("viewBox", "0 0 200 200");
-        svg.style.width = "min(260px, 70vw)";
+        svg.style.width = Math.round(Math.min(260, window.innerWidth * 0.7)) + "px";
         svg.style.height = "auto";
         stage.appendChild(svg);
         mount.appendChild(stage);

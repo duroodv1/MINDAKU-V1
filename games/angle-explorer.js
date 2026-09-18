@@ -132,6 +132,7 @@
           handle.addEventListener("pointerdown", function (e) { dragging = true; handle.setPointerCapture(e.pointerId); });
           handle.addEventListener("pointermove", function (e) { if (dragging) upd(e); });
           handle.addEventListener("pointerup", function () { dragging = false; });
+          handle.addEventListener("pointercancel", function () { dragging = false; });
           var rotRow = MK.el("div", "tool-row");
           var bl = MK.el("button", "tool-btn", "◀ 15°");
           var br = MK.el("button", "tool-btn", "15° ▶");
