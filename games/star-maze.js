@@ -165,7 +165,7 @@
         else move(0, dy > 0 ? 1 : -1);
       }
       if (window.PointerEvent) {
-        wrap.addEventListener("pointerdown", function (e) { ptrOK = true; var c = MK.evtXY(e); if (c) { sx = c.x; sy = c.y; } });
+        wrap.addEventListener("pointerdown", function (e) { ptrOK = true; try { wrap.setPointerCapture(e.pointerId); } catch (err) { } var c = MK.evtXY(e); if (c) { sx = c.x; sy = c.y; } });
         wrap.addEventListener("pointerup", function (e) { var c = MK.evtXY(e); if (c) swipeEnd(c.x, c.y); });
         wrap.addEventListener("pointercancel", function () { sx = sy = null; });
       }
