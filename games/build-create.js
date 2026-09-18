@@ -38,7 +38,16 @@
 
       /* papan */
       var boardWrap = MK.el("div", "canvas-wrap");
-      boardWrap.style.cssText += ";max-width:480px;margin:0 auto;background:#FDFBF5;height:min(400px,70vw)";
+      boardWrap.style.cssText += ";max-width:480px;margin:0 auto;background:#FDFBF5";
+      /* ketinggian dikira dengan JS — CSS min() tidak disokong WebView lama (<Chromium 79);
+         tanpa ini papan menjadi 0px tinggi dan permainan "tidak berfungsi" */
+      function fitBoard() {
+        var h = Math.round(Math.min(400, window.innerWidth * 0.7));
+        boardWrap.style.height = Math.max(240, h) + "px";
+      }
+      fitBoard();
+      var onRz = function () { if (!boardWrap.isConnected) { window.removeEventListener("resize", onRz); return; } fitBoard(); };
+      window.addEventListener("resize", onRz);
       var NS = "http://www.w3.org/2000/svg";
       var svg = document.createElementNS(NS, "svg");
       svg.setAttribute("viewBox", "0 0 480 400");
@@ -147,6 +156,8 @@
         if (dragTarget && moved) api.sfx("tap");
         dragTarget = null;
       });
+      /* Android: sentuhan kadang-kadang dibatalkan sistem (scroll) — pastikan seret berhenti bersih */
+      svg.addEventListener("pointercancel", function () { dragTarget = null; });
 
       /* alat */
       var shapeRow = MK.el("div", "tool-row");
