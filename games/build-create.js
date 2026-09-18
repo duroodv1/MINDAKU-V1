@@ -38,7 +38,16 @@
 
       /* papan */
       var boardWrap = MK.el("div", "canvas-wrap");
-      boardWrap.style.cssText += ";max-width:480px;margin:0 auto;background:#FDFBF5;height:min(400px,70vw)";
+      boardWrap.style.cssText += ";max-width:480px;margin:0 auto;background:#FDFBF5";
+      /* ketinggian dikira dengan JS — CSS min() tidak disokong WebView lama (<Chromium 79);
+         tanpa ini papan menjadi 0px tinggi dan permainan "tidak berfungsi" */
+      function fitBoard() {
+        var h = Math.round(Math.min(400, window.innerWidth * 0.7));
+        boardWrap.style.height = Math.max(240, h) + "px";
+      }
+      fitBoard();
+      var onRz = function () { if (!boardWrap.isConnected) { window.removeEventListener("resize", onRz); return; } fitBoard(); };
+      window.addEventListener("resize", onRz);
       var NS = "http://www.w3.org/2000/svg";
       var svg = document.createElementNS(NS, "svg");
       svg.setAttribute("viewBox", "0 0 480 400");
@@ -101,52 +110,87 @@
         return g;
       }
 
-      function pos(e) {
+      function pos(cx, cy) {
         var r = svg.getBoundingClientRect();
-        return { x: (e.clientX - r.left) * (480 / r.width), y: (e.clientY - r.top) * (400 / r.height) };
+        if (!r || !r.width || !r.height) return { x: 240, y: 200 }; /* papan belum bersaiz — guna tengah */
+        return { x: (cx - r.left) * (480 / r.width), y: (cy - r.top) * (400 / r.height) };
       }
       function snap(v) { return Math.round(v / 12) * 12; }
 
-      var dragTarget = null, dragOff = { x: 0, y: 0 }, moved = false;
+      var dragTarget = null, dragOff = { x: 0, y: 0 }, moved = false, ptrOK = false, lastTouch = 0;
 
-      svg.addEventListener("pointerdown", function (e) {
-        var p = pos(e);
-        var g = e.target.closest("g");
-        if (g && g !== gridG && g.dataset.placed) {
-          // seret item sedia ada
-          dragTarget = g;
-          dragOff.x = parseFloat(g.dataset.x) - p.x;
-          dragOff.y = parseFloat(g.dataset.y) - p.y;
+      /* ---------- Lapisan input sejagat ----------
+         1) Pointer Events — pelayar baharu (Chrome, Edge, Safari 13+)
+         2) Sentuhan (touch) — pelayar lama tanpa Pointer Events
+         3) Tetikus (mouse) — pelayar desktop lama
+         Hanya satu lapisan aktif pada satu masa (ptrOK). */
+      function down(cx, cy, target, capture) {
+        var p = pos(cx, cy);
+        var hit = target && target.closest ? target.closest("g") : null;
+        if (hit && hit !== gridG && hit.dataset.placed) {
+          /* seret item sedia ada */
+          dragTarget = hit;
+          dragOff.x = parseFloat(hit.dataset.x) - p.x;
+          dragOff.y = parseFloat(hit.dataset.y) - p.y;
           moved = false;
-          svg.setPointerCapture(e.pointerId);
+          if (capture) { try { capture(); } catch (err) { } }
         } else {
-          // letak bentuk baharu
+          /* letak bentuk baharu */
           var x = snap(p.x), y = snap(p.y);
           var el = shapeEl(state.shape, state.color, x, y);
           el.dataset.placed = "1";
           el.dataset.x = x; el.dataset.y = y;
-          el.classList.add("drop-in");
-          el.addEventListener("pointerdown", itemPointerDown);
+          el.classList.add("drop-in-svg");
           svg.appendChild(el);
           placed.push(el);
           api.sfx("place");
         }
-      });
-      function itemPointerDown(e) {
-        /* tidak digunakan — seret dikendalikan pada svg */
       }
-      svg.addEventListener("pointermove", function (e) {
+      function move(cx, cy) {
         if (!dragTarget) return;
-        var p = pos(e);
+        var p = pos(cx, cy);
         var x = snap(p.x + dragOff.x), y = snap(p.y + dragOff.y);
         dragTarget.dataset.x = x; dragTarget.dataset.y = y;
         dragTarget.setAttribute("transform", "translate(" + x + "," + y + ")");
         moved = true;
-      });
-      svg.addEventListener("pointerup", function () {
+      }
+      function up() {
         if (dragTarget && moved) api.sfx("tap");
         dragTarget = null;
+      }
+
+      if (window.PointerEvent) {
+        svg.addEventListener("pointerdown", function (e) {
+          ptrOK = true;
+          var c = MK.evtXY(e);
+          if (c) down(c.x, c.y, e.target, function () { svg.setPointerCapture(e.pointerId); });
+        });
+        svg.addEventListener("pointermove", function (e) { var c = MK.evtXY(e); if (c) move(c.x, c.y); });
+        svg.addEventListener("pointerup", up);
+        svg.addEventListener("pointercancel", up);
+      }
+      svg.addEventListener("touchstart", function (e) {
+        if (ptrOK) return;
+        e.preventDefault();
+        lastTouch = Date.now();
+        var c = MK.evtXY(e);
+        if (c) down(c.x, c.y, e.target, null);
+      }, { passive: false });
+      svg.addEventListener("touchmove", function (e) {
+        if (ptrOK || !dragTarget) return;
+        e.preventDefault();
+        var c = MK.evtXY(e);
+        if (c) move(c.x, c.y);
+      }, { passive: false });
+      svg.addEventListener("touchend", function (e) { if (ptrOK) return; e.preventDefault(); up(); }, { passive: false });
+      svg.addEventListener("touchcancel", function () { if (!ptrOK) up(); });
+      svg.addEventListener("mousedown", function (e) {
+        if (ptrOK || Date.now() - lastTouch < 600) return;
+        var c = MK.evtXY(e);
+        if (c) down(c.x, c.y, e.target, null);
       });
+      document.addEventListener("mousemove", function (e) { var c = MK.evtXY(e); if (!ptrOK && dragTarget && svg.isConnected && c) move(c.x, c.y); });
+      document.addEventListener("mouseup", function () { if (!ptrOK && dragTarget && svg.isConnected) up(); });
 
       /* alat */
       var shapeRow = MK.el("div", "tool-row");

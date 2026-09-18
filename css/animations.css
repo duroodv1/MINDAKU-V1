@@ -60,9 +60,16 @@
 .found-pop{animation:popIn .4s ease both}
 /* Bunga tumbuh (Typing Garden) */
 .grow-stage{animation:bloomIn .45s ease both}
-/* Blok jatuh lembut (Number Crane / Build) */
+/* Blok jatuh lembut (Number Crane / Build) — HTML sahaja */
 .drop-in{animation:slideDownSoft .5s cubic-bezier(.3,1.3,.5,1) both}
 @keyframes slideDownSoft{from{transform:translateY(-26px);opacity:0}to{transform:none;opacity:1}}
+/* SELAMAT-SVG: jangan animasikan transform pada elemen SVG — transform CSS
+   akan MENGATASI atribut transform="translate(x,y)" SVG dan bentuk akan
+   tersekat di penjuru (0,0). Guna opacity sahaja. */
+.drop-in-svg{animation:svgFade .3s ease both}
+@keyframes svgFade{from{opacity:0}to{opacity:1}}
+/* Pop SVG berpaksikan pusat elemen sendiri (bukan penjuru viewBox) */
+.found-pop,.snap-in{transform-box:fill-box;transform-origin:center}
 /* Sudut / pemutar */
 .angle-arm{transition:transform .25s ease}
 /* Anyaman warna (Color Lab) */

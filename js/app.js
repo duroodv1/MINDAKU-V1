@@ -4,7 +4,7 @@
    ============================================================ */
 "use strict";
 window.MK = window.MK || {};
-MK.VERSION = "1.2.3";
+MK.VERSION = "1.2.4";
 MK.APP_NAME = "MINDAKU V.1";
 
 /* ---------- Utiliti DOM ---------- */

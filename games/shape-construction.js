@@ -80,7 +80,7 @@
           var src = tmp.firstElementChild;
           var s = part.small ? 0.62 : 1;
           g.setAttribute("transform", "translate(" + part.x + "," + part.y + ") scale(" + s + ") translate(-80,-80)");
-          g.classList.add("drop-in");
+          g.classList.add("drop-in-svg");
           while (src.childNodes.length) g.appendChild(src.firstChild);
           g.setAttribute("fill", "");
           svg.appendChild(g);
