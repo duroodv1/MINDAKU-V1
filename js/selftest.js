@@ -63,11 +63,11 @@ MK.SelfTest = (function () {
   function collectIssues() {
     var issues = [];
     var gameIds = Object.keys(MK.GAMES || {});
-    if (gameIds.length !== 50) issues.push("Jumlah permainan = " + gameIds.length + " (sepatutnya 50)");
-    // kategori: 10 × 5
+    if (gameIds.length !== 55) issues.push("Jumlah permainan = " + gameIds.length + " (sepatutnya 55)");
+    // kategori: 5 dunia × 6 permainan + 5 dunia × 5 permainan = 55
     MK.CATEGORIES.forEach(function (cat) {
       var games = MK.gamesInCategory(cat.id);
-      if (games.length !== 5) issues.push("Kategori " + cat.name + " ada " + games.length + " permainan (sepatutnya 5)");
+      if (games.length < 5 || games.length > 6) issues.push("Kategori " + cat.name + " ada " + games.length + " permainan (sepatutnya 5-6)");
     });
     gameIds.forEach(function (gid) {
       var def = MK.GAMES[gid];

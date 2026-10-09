@@ -14,7 +14,7 @@ MK.Audio = (function () {
       if (unlocked) return;
       var AC = window.AudioContext || window.webkitAudioContext;
       if (!AC) return;
-      if (!ctx) { ctx = new AC(); master = ctx.createGain(); master.gain.value = VOL; master.connect(ctx.destination); }
+      if (!ctx) { ctx = new AC(); master = ctx.createGain(); master.gain.value = volOverride != null ? volOverride : VOL; master.connect(ctx.destination); }
       if (ctx.state === "suspended") ctx.resume();
       unlocked = true;
     } catch (e) { /* tiada audio — teruskan */ }
@@ -153,6 +153,13 @@ MK.Audio = (function () {
     if (musicTimer) { clearInterval(musicTimer); musicTimer = null; }
   }
 
+  /* Kawalan kelantangan permainan (Muzik Ceria) — null = lalai aplikasi */
+  var volOverride = null;
+  function setVolume(v) {
+    volOverride = v;
+    try { if (master) master.gain.value = (v != null ? v : VOL); } catch (e) { }
+  }
+
   /* Main nada pada frekuensi tertentu (untuk permainan nada) */
   function playFreq(freq, dur) {
     try {
@@ -164,7 +171,7 @@ MK.Audio = (function () {
   }
 
   return {
-    unlock: unlock, sfx: sfx, playSound: playSound, playGameSound: playGameSound, playFreq: playFreq,
+    unlock: unlock, sfx: sfx, playSound: playSound, playGameSound: playGameSound, playFreq: playFreq, setVolume: setVolume,
     startMusic: startMusic, stopMusic: stopMusic, supported: function () { return !!(window.AudioContext || window.webkitAudioContext); }
   };
 })();

@@ -3,7 +3,7 @@
    MINDAKU V.1 — service-worker.js (Offline-First)
    Cache-first untuk shell aplikasi + data + assets.
    ============================================================ */
-var CACHE = "mindaku-v1.2.5";
+var CACHE = "mindaku-v1.3.0";
 var PRECACHE = [
   "css/accessibility.css",
   "css/animations.css",
@@ -20,11 +20,14 @@ var PRECACHE = [
   "data/sounds.json",
   "data/vocabulary.json",
   "games/angle-explorer.js",
+  "games/bina-robot.js",
+  "games/cipta-cerita.js",
   "games/animal-habitat.js",
   "games/ask-first.js",
   "games/build-create.js",
   "games/category-words.js",
   "games/color-by-number.js",
+  "games/detektif-digital.js",
   "games/color-lab.js",
   "games/daily-routine.js",
   "games/fair-share.js",
@@ -36,6 +39,7 @@ var PRECACHE = [
   "games/math-garden.js",
   "games/memory-match.js",
   "games/multiplication-garden.js",
+  "games/muzik-ceria.js",
   "games/number-crane.js",
   "games/object-hunt.js",
   "games/odd-one-out.js",
@@ -59,6 +63,7 @@ var PRECACHE = [
   "games/solar-mission.js",
   "games/sound-sorter.js",
   "games/star-maze.js",
+  "games/susun-blok.js",
   "games/syllable-frog.js",
   "games/symmetry-mirror.js",
   "games/tangram-challenge.js",

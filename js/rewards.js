@@ -12,7 +12,7 @@ MK.Rewards = (function () {
     { id: "games_5", icon: "🌟", name: "Penjelajah Muda", desc: "Cuba 5 permainan berbeza" },
     { id: "games_10", icon: "🚀", name: "Penjelajah Penuh Semangat", desc: "Cuba 10 permainan berbeza" },
     { id: "games_25", icon: "🗺️", name: "Pengembara Dunia", desc: "Cuba 25 permainan berbeza" },
-    { id: "games_50", icon: "👑", name: "Juara MINDAKU", desc: "Cuba semua 50 permainan" },
+    { id: "games_50", icon: "👑", name: "Juara MINDAKU", desc: "Cuba semua 55 permainan" },
     { id: "stars_25", icon: "⭐", name: "Penukil Bintang", desc: "Kumpul 25 bintang" },
     { id: "stars_100", icon: "✨", name: "Ribuan Bersinar", desc: "Kumpul 100 bintang" },
     { id: "stars_300", icon: "🌠", name: "Langit Berkilau", desc: "Kumpul 300 bintang" },

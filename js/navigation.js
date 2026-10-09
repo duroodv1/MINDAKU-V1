@@ -72,7 +72,7 @@ MK.Nav = (function () {
       '<div class="mascot-wrap">' + MK.mascotSVG("wave") + "</div>" +
       '<div class="app-logo">MINDA<span class="accentdot">KU</span></div>' +
       '<div class="tagline">Belajar • Bermain • Berkembang</div>' +
-      '<div class="subtag">50 Permainan Interaktif untuk Kanak-kanak 8–12 Tahun</div>' +
+      '<div class="subtag">55 Permainan Interaktif untuk Kanak-kanak 8–12 Tahun</div>' +
       "</div>"
     );
     sc.appendChild(hero);
@@ -119,7 +119,7 @@ MK.Nav = (function () {
   /* ================= SKRIN: DUNIA PERMAINAN ================= */
   register("worlds", function (sc) {
     topbar(sc, "🎮 Dunia Permainan", true);
-    sc.appendChild(MK.el("div", "soft-note", "10 dunia • 50 permainan — semuanya boleh dimainkan"));
+    sc.appendChild(MK.el("div", "soft-note", "10 dunia • 55 permainan — semuanya boleh dimainkan"));
     var grid = MK.el("div", "cards-grid mt8");
     MK.CATEGORIES.forEach(function (cat) {
       var games = MK.gamesInCategory(cat.id);
@@ -242,7 +242,7 @@ MK.Nav = (function () {
     rInstall.querySelector("button").addEventListener("click", function () { MK.installPWA(); });
     gApp.appendChild(rInstall);
 
-    var rDiag = MK.h('<div class="set-row"><div><div class="slabel">🧪 Ujian Sistem</div><div class="sdesc">Semak semua 50 permainan berfungsi</div></div><button class="btn small">Uji</button></div>');
+    var rDiag = MK.h('<div class="set-row"><div><div class="slabel">🧪 Ujian Sistem</div><div class="sdesc">Semak semua 55 permainan berfungsi</div></div><button class="btn small">Uji</button></div>');
     rDiag.querySelector("button").addEventListener("click", function () { MK.SelfTest && MK.SelfTest.run(true); });
     gApp.appendChild(rDiag);
 
